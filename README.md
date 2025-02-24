@@ -58,7 +58,8 @@ Se han implementado diversas mejoras para garantizar que la página sea accesibl
 
 ## 🖼️ Ejemplo de análisis de accesibilidad
 
-![image](https://github.com/user-attachments/assets/67b6d779-10ba-4dbf-ae44-36fa79d41fab)
+![image](https://github.com/user-attachments/assets/7fbc1276-1ea4-488f-b26d-36183e15a387)
+
 
 ## 🛠️ Tecnologías Utilizadas
 
