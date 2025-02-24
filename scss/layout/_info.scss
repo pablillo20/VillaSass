@@ -1,0 +1,32 @@
+/**
+ * Estilos para el contenedor principal de la sección de información (`.info`).
+ * 
+ * La sección de información se ubica en el grid general, ocupando todo el ancho
+ * disponible desde la columna 1 hasta la última. Se encuentra posicionada en la fila 4.
+ */
+ .info {
+    grid-column: 1 / -1; 
+    grid-row: 4 / 5; 
+
+    /**
+     * Estilos para el texto dentro de la sección de información (`.info-text`).
+     * 
+     * El texto está centrado usando **Flexbox**, con un tamaño de fuente grande,
+     * un sutil efecto de sombra y bordes redondeados para el fondo.
+     */
+    &-text {
+        @include flex;
+        font-size: 5rem; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        border-radius: 10px; 
+
+        /**
+         * Estilos adicionales para pantallas pequeñas.
+         * 
+         * En pantallas pequeñas, se reduce el tamaño de la fuente para adaptarse mejor al espacio.
+         */
+        @include media(small) {
+            font-size: 2rem; 
+        }
+    }
+}

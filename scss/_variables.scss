@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
+
+/* Paleta de colores */
+$colors: (
+    primary: black,
+    secondary:  rgba(218, 165, 32, 0.5),
+    tertiary: white,
+    quaternary: rgb(237, 221, 221),
+    quinta: rgb(111, 109, 34)
+);
+
+/* Funcion que devuelve el color */
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+/* Tamaño de fuente */
+$font-sizes: (
+    xxl: 6rem,
+    xl: 6rem,
+    lg: 2.5rem,
+    md: 2rem,
+    sm: 1.8rem,
+    xs: 1.6rem
+);
+
+/* Funcion que devuelve un tamaño */
+@function size($size) {
+    @return map-get($font-sizes, $size);
+}
+
+$font-family: 'Nunito', sans-serif;
+
+/* Variables de media queries */
+$breakpoints: (
+    small: 666px,
+    medium: 768px,
+    large: 1024px
+);
+
+/* Función para obtener los breakpoints */
+@function breakpoint($size) {
+    @return map-get($breakpoints, $size);
+}

@@ -1,0 +1,79 @@
+/**
+ * Estilos para el contenedor principal `.content`.
+ *
+ * Este contenedor se posiciona dentro de un diseño basado en grid y utiliza
+ * Flexbox para organizar su contenido. El comportamiento cambia según el tamaño de la pantalla.
+ *
+ * @mixin media(small) Aplica estilos para pantallas pequeñas.
+ */
+ .content {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
+    margin-left: 5rem; 
+    margin-top: 5rem; 
+    gap: 1rem; 
+    position: absolute;
+    z-index: 1001; 
+
+    /**
+     * Estilos para pantallas pequeñas.
+     *
+     * En pantallas pequeñas, el contenedor ocupa toda la columna del grid
+     * y se reposiciona dentro del diseño.
+     */
+    @include media(small) {
+        grid-column: 1 / -1; 
+        grid-row: 2 / 3;      
+        position: relative;   
+    }
+
+    /**
+     * Estilo para el título dentro del contenedor.
+     *
+     * El título tiene un tamaño grande y en negrita.
+     */
+    .title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: color(primary);
+    }
+
+    /**
+     * Estilo para la descripción dentro del contenedor.
+     *
+     * La descripción tiene un tamaño de texto moderado.
+     */
+    .description {
+        font-size: 1.5rem;
+        color: color(primary); 
+    }
+
+    /**
+     * Estilo para el botón.
+     *
+     * El botón tiene un tamaño grande, un color de fondo y efectos de transición.
+     */
+    .cta-button {
+        padding: 1rem 2rem; 
+        background-color: color(primary); 
+        border: none; 
+        color: white; 
+        font-size: 2rem;
+        cursor: pointer; 
+        transition: background-color 0.3s, transform 0.3s; 
+
+        /**
+         * Efecto al pasar el cursor sobre el botón (hover).
+         *
+         * Cuando el usuario pasa el mouse sobre el botón, el color de fondo cambia ligeramente.
+         */
+        &:hover {
+            background-color: color(primary);
+            transform: scale(1.05);
+        }
+    }
+}

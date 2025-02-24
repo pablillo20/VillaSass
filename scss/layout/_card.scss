@@ -1,0 +1,41 @@
+/**
+ * Estilos para el contenedor de la tarjeta (`.card`).
+ *
+ * La tarjeta ocupa una fila completa en el grid y se ubica en la fila 6 del diseño.
+ * También tiene un margen superior dinámico, ajustándose en función del tamaño de la pantalla.
+ */
+ .card {
+    grid-column: 1 / -1; 
+    grid-row: 6 / 7;
+
+    margin-top: 2rem; 
+
+    @include flex(); 
+
+    /**
+     * Estilos para pantallas pequeñas.
+     *
+     * En pantallas pequeñas, el margen superior se reduce a 1rem para optimizar el espacio.
+     */
+    @include media(small) {
+        margin-top: 1rem; 
+    }
+
+    /**
+     * Estilos para pantallas medianas.
+     *
+     * En pantallas medianas, el margen superior se ajusta a 1.5rem.
+     */
+    @include media(medium) {
+        margin-top: 1.5rem;
+    }
+
+    /**
+     * Estilos para pantallas grandes.
+     *
+     * En pantallas grandes, el margen superior aumenta a 2.5rem para proporcionar más espacio.
+     */
+    @include media(large) {
+        margin-top: 2.5rem; 
+    }
+}

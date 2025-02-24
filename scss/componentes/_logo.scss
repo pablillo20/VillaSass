@@ -1,0 +1,54 @@
+/**
+ * Estilos para el contenedor del logo (`.logo`).
+ *
+ * El logo se posiciona en la cuadrícula y se adapta al tamaño del contenedor.
+ * Además, tiene un tamaño fijo de 12rem y se ajusta en función de los tamaños de pantalla.
+ */
+ .logo {
+    grid-column: 2 / 3; 
+    grid-row: 1 / 2; 
+    width: 12rem; 
+    height: 12rem; 
+    place-self: center; 
+    padding: 1rem; 
+
+
+    /**
+     * Estilos para pantallas pequeñas (`small`).
+     *
+     * Cambia el diseño del logo para que ocupe la primera columna de la cuadrícula
+     * y se coloque en el centro.
+     */
+    @include media(small) {
+        grid-column: 1 / 2; 
+        display: flex;
+        flex-wrap: wrap; 
+        align-content: center;
+        justify-content: center; 
+    }
+
+
+    /**
+     * Estilos para la imagen del logo (`.logo-img`).
+     *
+     * La imagen ocupa el 100% del ancho y la altura del contenedor del logo,
+     * y mantiene la proporción correcta mediante `object-fit: cover`.
+     */
+    &-img {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover; 
+    }
+
+    /**
+     * Estilos para pantallas pequeñas (`small`).
+     *
+     * En pantallas pequeñas, el tamaño de la imagen del logo se reduce a 4rem de ancho y altura.
+     */
+    @include media(small) {
+        &-img {
+            width: 4rem; 
+            height: 4rem; 
+        }
+    }
+}

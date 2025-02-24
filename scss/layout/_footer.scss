@@ -1,0 +1,103 @@
+/**
+ * Estilos para el pie de página (`footer`).
+ * 
+ * El pie de página ocupa toda la fila en el grid y se posiciona en la fila 8.
+ * Utiliza un diseño **Flexbox** para centrar su contenido y proporciona un padding general.
+ */
+ footer {
+    grid-column: 1 / -1; 
+    grid-row: 8 / 9; 
+
+    
+    display: flex; 
+    align-items: flex-start;
+    justify-content: center; 
+    padding: 3%; 
+
+    /**
+     * Estilos para el contenedor de cada sección del pie de página (`.footer-div`).
+     *
+     * Cada sección tiene un borde superior y un ancho del 33.3% para dividir el espacio.
+     * El texto se alinea al centro dentro de cada sección.
+     */
+    .footer-div {
+        border-top: 2px solid color(secundary); 
+        width: 33.3%; 
+        text-align: center; 
+
+        /**
+         * Estilos para el contenedor de enlaces (`#footer-links`).
+         *
+         * Los enlaces se alinean en **Flexbox** de forma horizontal, centrados en la sección.
+         */
+        #footer-links {
+            display: flex; 
+            align-items: flex-start;
+            justify-content: center; 
+            width: 100%; 
+
+            /**
+             * Estilos para los elementos `div` dentro de `#footer-links`.
+             *
+             * Cada `div` ocupa el 50% del ancho.
+             */
+            div {
+                width: 50%; 
+                border: none;
+            }
+
+            /**
+             * Estilos para los íconos de Font Awesome (`fafaIcons`).
+             *
+             * Los íconos se configuran con color cuaternario y un tamaño de 2rem.
+             */
+            @include fafaIcons(color(quaternary), 2rem); 
+        }
+    }
+
+    /**
+     * Estilos para el título `h5` dentro del pie de página.
+     *
+     * El texto tiene un color secundario y un tamaño de fuente ajustado.
+     * Se coloca un margen superior del 3%.
+     */
+    h5 {
+        color: color(secundary);
+        margin-top: 3%;
+        font-size: 1.2em; 
+        height: 20%;
+    }
+
+    /**
+     * Estilos para los párrafos (`p`) dentro del pie de página.
+     *
+     * Se aplica un margen pequeño para separar los párrafos.
+     */
+    p {
+        margin: 0.2%;
+    }
+}
+
+/**
+ * Estilos para pantallas pequeñas.
+ * 
+ * En pantallas pequeñas, el pie de página cambia su disposición de filas a columnas.
+ * Las secciones dentro del pie de página tienen un 100% de ancho, y se ajustan los márgenes y el texto.
+ */
+@include media(small) {
+    footer {
+        flex-direction: column;
+        align-items: center; 
+
+        .footer-div {
+            width: 100%; 
+            border-bottom: none; 
+            padding: 2%; 
+        }
+
+        h5 {
+            width: 100%; 
+            text-align: center; 
+        }
+    }
+}

@@ -1,0 +1,34 @@
+// IMPORTS ***************************************************************
+
+// VARIABLES
+@import './variables';
+
+// MIXIN
+@import './mixin';
+
+// BASE
+@import './base';
+
+// LAYOUT 
+@import './layout/_header'; 
+@import './layout/home.scss';
+@import './layout/_info';
+@import './layout/villas';
+@import './layout/card';
+@import './layout/footer';
+
+// COMPONENTES HEADER
+@import './componentes/logo';
+@import './componentes/heading';
+@import './componentes/nav';
+@import './componentes/contenido-home';
+@import './componentes/imagen-home';
+@import './componentes/info-container';
+@import './componentes/villas-container';
+@import './componentes/cards';
+@import './componentes/footer';
+
+
+
+
+

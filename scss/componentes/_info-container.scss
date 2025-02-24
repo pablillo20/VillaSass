@@ -1,0 +1,143 @@
+/**
+ * Estilos para el componente del contenedor de información (`.info-contenedor`).
+ *
+ * Este contenedor utiliza Flexbox para organizar sus elementos de manera 
+ * flexible. El contenido está centrado y se ajusta según el tamaño de pantalla.
+ *
+ */
+ .info-contenedor {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 15rem; 
+    padding: 2rem;
+
+    /**
+     * Estilos para el contenedor de cada tarjeta de información (`.info-contenedor-tarjeta`).
+     *
+     * Cada tarjeta está centrada y tiene un ancho máximo de 18rem.
+     */
+    &-tarjeta {
+        text-align: center;
+        max-width: 18rem; 
+
+        /**
+         * Estilos para la imagen dentro de cada tarjeta.
+         *
+         * La imagen tiene un tamaño fijo y un margen inferior.
+         */
+        img {
+            width: 4rem;
+            height: auto; 
+            margin-bottom: 0.8rem; 
+        }
+
+        /**
+         * Estilos para el título dentro de cada tarjeta (`h3`).
+         *
+         * El título tiene un tamaño de fuente grande, en negrita y en mayúsculas.
+         */
+        h3 {
+            font-size: 2.2rem; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            color: #b9975b;
+        }
+
+        /**
+         * Estilos para el párrafo dentro de cada tarjeta (`p`).
+         *
+         * El párrafo tiene un tamaño de fuente moderado y un buen interlineado.
+         */
+        p {
+            color: black; 
+            font-size: 1.5rem;
+            line-height: 1.6; 
+        }
+    }
+
+    /**
+     * Estilos específicos para pantallas pequeñas.
+     *
+     * El contenedor cambia la dirección de los elementos a columna,
+     * y el espaciado y tamaños de los elementos también se ajustan.
+     */
+    @include media(small) {
+        flex-direction: column; 
+        gap: 2rem; 
+        padding: 1rem; 
+
+        &-tarjeta {
+            max-width: 100%; 
+            margin: 0 auto; 
+
+            img {
+                width: 3rem; 
+            }
+
+            h3 {
+                font-size: 1.8rem; 
+            }
+
+            p {
+                font-size: 1.3rem; 
+            }
+        }
+    }
+
+    /**
+     * Estilos específicos para pantallas medianas.
+     *
+     * El espaciado y el tamaño de las tarjetas se ajustan para pantallas de tamaño
+     * mediano, mejorando la disposición visual.
+     */
+    @include media(medium) {
+        gap: 10rem; 
+        padding: 1.5rem;
+
+        &-tarjeta {
+            max-width: 80%; 
+
+            img {
+                width: 3.5rem; 
+            }
+
+            h3 {
+                font-size: 2rem; 
+            }
+
+            p {
+                font-size: 1.4rem; 
+            }
+        }
+    }
+
+    /**
+     * Estilos específicos para pantallas grandes.
+     *
+     * El espaciado y tamaño de las tarjetas se ajustan para pantallas grandes,
+     * asegurando que el diseño siga siendo visualmente atractivo.
+     */
+    @include media(large) {
+        gap: 5rem;
+        padding: 3rem; 
+
+        &-tarjeta {
+            max-width: 60%; 
+
+            img {
+                width: 4.5rem; 
+            }
+
+            h3 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.6rem; 
+            }
+        }
+    }
+}

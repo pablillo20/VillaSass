@@ -1,0 +1,17 @@
+/**
+ * Estilos para el contenedor principal de la sección de villas (`.villas`).
+ * 
+ * Esta clase se coloca en el grid general, ocupando todo el ancho disponible
+ * desde la columna 1 hasta la última columna y posicionándose en la fila 5.
+ */
+ .villas {
+    grid-column: 1 / -1; 
+    grid-row: 5 / 6; 
+
+    /**
+     * Estilo utilizando **Flexbox** para el contenedor.
+     * 
+     * Se aplica Flexbox para organizar y alinear los elementos dentro de la sección de villas.
+     */
+    @include flex; 
+}

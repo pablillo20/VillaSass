@@ -1,0 +1,28 @@
+/**
+ * Estilos para el contenedor principal del encabezado (`.header`).
+ * 
+ * El encabezado se coloca en el grid general en la primera fila, ocupando todas las columnas.
+ * El `header` se estructura como un grid con 9 columnas y 3 filas.
+ * 
+ * El diseño se adapta al contenido, utilizando `minmax()` para definir los límites de las columnas
+ * y filas, asegurando una distribución flexible.
+ */
+ .header {
+    grid-column: 1 / -1;  
+    grid-row: 1 / 2; 
+
+    /**
+     * El encabezado utiliza un diseño **Grid** para organizar los elementos en columnas y filas.
+     * Se definen 9 columnas con tamaños flexibles usando `minmax()` y 3 filas de tamaño mínimo.
+     */
+    display: grid;  
+    grid-template-columns: minmax(5rem, 1fr) repeat(7, minmax(min-content, 16rem)) minmax(10rem, 1fr); 
+    grid-template-rows: repeat(3, min-content); 
+    grid-row-gap: 2rem; 
+
+    z-index: 100; 
+
+    background-color: color(quaternary); 
+    gap: 1rem; 
+    width: 100%;
+}

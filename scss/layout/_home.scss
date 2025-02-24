@@ -1,0 +1,21 @@
+/**
+ * Estilos para el contenedor principal de la sección de inicio (`.home`).
+ * 
+ * Esta clase coloca la sección en el grid general y organiza su contenido utilizando **Grid Layout**.
+ * 
+ * La disposición se basa en tres columnas de tamaños flexibles, con un espacio entre columnas y filas definido.
+ */
+ .home {
+    grid-column: 1 / -1; 
+    grid-row: 2 / 3; 
+
+    /**
+     * El contenedor utiliza un diseño **Grid** con tres columnas y dos filas.
+     * Las columnas tienen tamaños flexibles, mientras que las filas se ajustan automáticamente al contenido.
+     */
+    display: grid; 
+    grid-template-columns: 1fr minmax(10rem, 1fr) 1fr; 
+    grid-template-rows: repeat(2, auto); 
+    grid-column-gap: 2rem; 
+    grid-row-gap: 2rem;
+}
