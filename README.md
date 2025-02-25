@@ -4,7 +4,7 @@
 **Villas SASS** es una landing page profesional para una empresa de **villas de lujo**. En este proyecto, trabajamos con **SASS/SCSS** para una mejor organización del código CSS, aplicando **variables, mixins** y una estructura modular que mejora la **legibilidad y reusabilidad** del código.  
 
 ## 🚀 Proyecto en Producción  
-Visita nuestra página 👉 **[Villas SASS - Sitio Web](https://pablillo20.github.io/VillasSass/)**  
+Visita nuestra página 👉 **[Villas SASS - Sitio Web](https://pablillo20.github.io/VillaSass/)**  
 
 ---
 
@@ -58,7 +58,8 @@ Se han implementado diversas mejoras para garantizar que la página sea accesibl
 
 ## 🖼️ Ejemplo de análisis de accesibilidad
 
-![image](https://github.com/user-attachments/assets/67b6d779-10ba-4dbf-ae44-36fa79d41fab)
+![image](https://github.com/user-attachments/assets/7fbc1276-1ea4-488f-b26d-36183e15a387)
+
 
 ## 🛠️ Tecnologías Utilizadas
 
