@@ -1,26 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700");
 /* Paleta de colores */
-/* Funcion que devuelve el color */
 /* Tamaño de fuente */
-/* Funcion que devuelve un tamaño */
 /* Variables de media queries */
-/* Función para obtener los breakpoints */
-/**
- * Mixin para generar cabeceras (`h1` a `h6`) con diferentes tamaños y colores.
- * 
- * Este mixin se encarga de aplicar el tamaño de fuente y color según el nivel de la cabecera 
- * (`h1` a `h6`), utilizando un esquema de colores y tamaños predefinidos.
- *
- * @param {Number} $level - El nivel de la cabecera (1 a 6). 
- * @param {Color} $color - El color de la cabecera (puede ser uno de los valores definidos como 'primary', 'secondary', etc.).
- */
-/**
- * Genera las cabeceras `h1` a `h6` con tamaños y colores específicos.
- * 
- * Utiliza el mixin `genera-cabeceras` para cada nivel de cabecera (`h1` a `h6`),
- * con tamaños de fuente y colores predefinidos para cada uno.
- */
 h1 {
   font-size: 6rem;
   color: black;
@@ -57,39 +39,6 @@ h6 {
   font-family: "Nunito", sans-serif;
 }
 
-/**
- * Mixin para crear un contenedor flex.
- * 
- * Este mixin crea un contenedor con el modelo **Flexbox** para alinear y distribuir los elementos 
- * de acuerdo con las opciones proporcionadas (dirección, justificación y alineación).
- *
- * @param {String} $direction - La dirección del eje principal (por defecto es `row`). Puede ser `row` o `column`.
- * @param {String} $justify - Cómo justificar los elementos a lo largo del eje principal (por defecto es `center`).
- * @param {String} $align - Cómo alinear los elementos a lo largo del eje transversal (por defecto es `center`).
- */
-/**
- * Mixin para aplicar estilos específicos para diferentes tamaños de pantalla (media queries).
- * 
- * Utiliza el mixin `media` para envolver contenido dentro de una consulta de medios que se activará 
- * cuando el tamaño de la pantalla sea menor o igual a un determinado breakpoint.
- *
- * @param {String} $size - El tamaño de la pantalla (puede ser uno de los valores definidos como 'small', 'medium', etc.).
- */
-/**
- * Mixin para agregar estilos a los íconos de FontAwesome.
- * 
- * Este mixin aplica estilos personalizados a los íconos de FontAwesome, incluyendo el tamaño de la fuente 
- * y el color, permitiendo que sean fácilmente reutilizados en toda la aplicación.
- *
- * @param {Color} $color - El color de los íconos (por defecto es `quinta`).
- * @param {String} $font-size - El tamaño de la fuente de los íconos (por defecto es `1.5rem`).
- */
-/**
- * Estilos globales aplicados a todos los elementos (`*`), pseudo-elementos `::after` y `::before`.
- * 
- * Estos estilos resetearán el margen y el padding predeterminado, establecerán una tipografía común
- * y activarán el modelo de caja **border-box** para todos los elementos.
- */
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -97,20 +46,10 @@ h6 {
   box-sizing: border-box;
 }
 
-/**
- * Estilos para el elemento `html`.
- * 
- * Se ajusta el tamaño de la fuente base al 62.5% para facilitar el cálculo de unidades rem.
- */
 html {
   font-size: 62.5%;
 }
 
-/**
- * Estilos para el contenedor principal (`.container`).
- * 
- * Este contenedor utiliza el sistema de **grid** para organizar el contenido.
- */
 .container {
   display: grid;
   grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
@@ -364,12 +303,6 @@ footer p {
     text-align: center;
   }
 }
-/**
- * Estilos para el contenedor del logo (`.logo`).
- *
- * El logo se posiciona en la cuadrícula y se adapta al tamaño del contenedor.
- * Además, tiene un tamaño fijo de 12rem y se ajusta en función de los tamaños de pantalla.
- */
 .logo {
   grid-column: 2/3;
   grid-row: 1/2;
@@ -377,23 +310,6 @@ footer p {
   height: 12rem;
   place-self: center;
   padding: 1rem;
-  /**
-   * Estilos para pantallas pequeñas (`small`).
-   *
-   * Cambia el diseño del logo para que ocupe la primera columna de la cuadrícula
-   * y se coloque en el centro.
-   */
-  /**
-   * Estilos para la imagen del logo (`.logo-img`).
-   *
-   * La imagen ocupa el 100% del ancho y la altura del contenedor del logo,
-   * y mantiene la proporción correcta mediante `object-fit: cover`.
-   */
-  /**
-   * Estilos para pantallas pequeñas (`small`).
-   *
-   * En pantallas pequeñas, el tamaño de la imagen del logo se reduce a 4rem de ancho y altura.
-   */
 }
 @media (max-width: 666px) {
   .logo {
@@ -416,12 +332,6 @@ footer p {
   }
 }
 
-/**
- * Estilos para el encabezado principal (`.heading`).
- *
- * El encabezado se coloca en un grid específico y se centra utilizando Flexbox.
- * Se ajusta según el tamaño de pantalla.
- */
 .heading {
   grid-column: 3/8;
   grid-row: 1/2;
@@ -430,32 +340,10 @@ footer p {
   justify-content: center;
   align-items: center;
   place-self: center;
-  /**
-   * Estilos para el texto dentro del encabezado (`.heading-text`).
-   *
-   * El margen y tamaño de fuente se ajustan según el tamaño de pantalla.
-   */
-  /**
-   * Estilos para pantallas medianas.
-   *
-   * El encabezado se ajusta a las columnas 2 a 9 y filas 1 a 2.
-   * El texto también tiene un ajuste en el margen y tamaño de fuente.
-   */
-  /**
-   * Estilos para pantallas grandes.
-   *
-   * El encabezado se mantiene en las columnas 3 a 8 y filas 1 a 2.
-   * El texto también tiene un ajuste en el margen y tamaño de fuente.
-   */
 }
 .heading-text {
   margin: 2rem;
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  /**
-   * Estilos para pantallas pequeñas.
-   *
-   * El margen se reduce a 1rem y el tamaño de fuente se ajusta a 3rem.
-   */
 }
 .heading-text:hover {
   color: darkred;
@@ -488,40 +376,11 @@ footer p {
   }
 }
 
-/**
- * Estilos para el componente de navegación (`.nav`).
- *
- * El contenedor de la navegación se posiciona en la cuadrícula y ocupa un rango de columnas
- * y filas específicos. Además, se aplica un `z-index` para asegurar que se apile encima de otros elementos.
- */
 .nav {
   grid-column: 2/9;
   grid-row: 2/3;
   z-index: 101;
   padding-bottom: 2rem;
-  /**
-   * Estilos para la lista de navegación (`.nav-list`).
-   *
-   * La lista se muestra sin estilo de lista predeterminado y se organiza con Flexbox,
-   * permitiendo una distribución horizontal de los elementos.
-   */
-  /**
-   * Estilos para pantallas pequeñas (`small`).
-   *
-   * En pantallas pequeñas, el contenedor de la navegación ocupa toda la anchura de la cuadrícula
-   * y se ajustan los estilos para mejorar la usabilidad en dispositivos pequeños.
-   */
-  /**
-   * Estilos para pantallas medianas (`medium`).
-   *
-   * En pantallas medianas, se ajustan los márgenes y el espaciado entre los elementos.
-   */
-  /**
-   * Estilos para pantallas grandes (`large`).
-   *
-   * En pantallas grandes, el contenedor de la navegación vuelve a ocupar un rango específico de columnas
-   * y se ajusta el espaciado y el margen para una mejor disposición.
-   */
 }
 .nav-list {
   list-style-type: none;
@@ -532,17 +391,6 @@ footer p {
   gap: 2rem;
   padding: 0;
   margin: 0;
-  /**
-   * Estilos para los elementos de la lista de navegación (`.nav-item`).
-   */
-}
-.nav-list .nav-item {
-  /**
-   * Estilos para el primer enlace de navegación (`a.first-nav-link`).
-   *
-   * Se aplican estilos específicos al enlace de la lista, como el color, el peso de la fuente,
-   * y la transformación de texto. Además, se incluye un efecto hover para cambiar el color.
-   */
 }
 .nav-list .nav-item a.first-nav-link {
   text-decoration: none;
@@ -550,11 +398,6 @@ footer p {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  /**
-   * Efecto hover sobre el enlace.
-   *
-   * Al pasar el cursor sobre el enlace, cambia su color a un tono de rojo más oscuro.
-   */
 }
 .nav-list .nav-item a.first-nav-link:hover {
   color: darkred;
@@ -594,14 +437,6 @@ footer p {
   }
 }
 
-/**
- * Estilos para el contenedor principal `.content`.
- *
- * Este contenedor se posiciona dentro de un diseño basado en grid y utiliza
- * Flexbox para organizar su contenido. El comportamiento cambia según el tamaño de la pantalla.
- *
- * @mixin media(small) Aplica estilos para pantallas pequeñas.
- */
 .content {
   grid-column: 2/3;
   grid-row: 1/2;
@@ -614,27 +449,6 @@ footer p {
   gap: 1rem;
   position: absolute;
   z-index: 1001;
-  /**
-   * Estilos para pantallas pequeñas.
-   *
-   * En pantallas pequeñas, el contenedor ocupa toda la columna del grid
-   * y se reposiciona dentro del diseño.
-   */
-  /**
-   * Estilo para el título dentro del contenedor.
-   *
-   * El título tiene un tamaño grande y en negrita.
-   */
-  /**
-   * Estilo para la descripción dentro del contenedor.
-   *
-   * La descripción tiene un tamaño de texto moderado.
-   */
-  /**
-   * Estilo para el botón.
-   *
-   * El botón tiene un tamaño grande, un color de fondo y efectos de transición.
-   */
 }
 @media (max-width: 666px) {
   .content {
@@ -660,33 +474,17 @@ footer p {
   font-size: 2rem;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
-  /**
-   * Efecto al pasar el cursor sobre el botón (hover).
-   *
-   * Cuando el usuario pasa el mouse sobre el botón, el color de fondo cambia ligeramente.
-   */
 }
 .content .cta-button:hover {
   background-color: black;
   transform: scale(1.05);
 }
 
-/**
- * Estilos para el contenedor de la imagen (`.image`).
- *
- * El contenedor ocupa todo el ancho y la altura del grid en la fila 1.
- * Se asegura de que la imagen ocupe todo el espacio disponible.
- */
 .image {
   grid-column: 1/-1;
   grid-row: 1/2;
   width: 100%;
   height: 100%;
-  /**
-   * Estilos para la imagen dentro del contenedor (`img`).
-   *
-   * La imagen se ajusta al 100% del contenedor y mantiene una proporción de cobertura.
-   */
 }
 .image img {
   width: 100%;
@@ -694,13 +492,6 @@ footer p {
   object-fit: cover;
 }
 
-/**
- * Estilos para el componente del contenedor de información (`.info-contenedor`).
- *
- * Este contenedor utiliza Flexbox para organizar sus elementos de manera 
- * flexible. El contenido está centrado y se ajusta según el tamaño de pantalla.
- *
- */
 .info-contenedor {
   display: flex;
   justify-content: center;
@@ -708,48 +499,10 @@ footer p {
   flex-wrap: wrap;
   gap: 15rem;
   padding: 2rem;
-  /**
-   * Estilos para el contenedor de cada tarjeta de información (`.info-contenedor-tarjeta`).
-   *
-   * Cada tarjeta está centrada y tiene un ancho máximo de 18rem.
-   */
-  /**
-   * Estilos específicos para pantallas pequeñas.
-   *
-   * El contenedor cambia la dirección de los elementos a columna,
-   * y el espaciado y tamaños de los elementos también se ajustan.
-   */
-  /**
-   * Estilos específicos para pantallas medianas.
-   *
-   * El espaciado y el tamaño de las tarjetas se ajustan para pantallas de tamaño
-   * mediano, mejorando la disposición visual.
-   */
-  /**
-   * Estilos específicos para pantallas grandes.
-   *
-   * El espaciado y tamaño de las tarjetas se ajustan para pantallas grandes,
-   * asegurando que el diseño siga siendo visualmente atractivo.
-   */
 }
 .info-contenedor-tarjeta {
   text-align: center;
   max-width: 18rem;
-  /**
-   * Estilos para la imagen dentro de cada tarjeta.
-   *
-   * La imagen tiene un tamaño fijo y un margen inferior.
-   */
-  /**
-   * Estilos para el título dentro de cada tarjeta (`h3`).
-   *
-   * El título tiene un tamaño de fuente grande, en negrita y en mayúsculas.
-   */
-  /**
-   * Estilos para el párrafo dentro de cada tarjeta (`p`).
-   *
-   * El párrafo tiene un tamaño de fuente moderado y un buen interlineado.
-   */
 }
 .info-contenedor-tarjeta img {
   width: 4rem;
@@ -825,25 +578,11 @@ footer p {
   }
 }
 
-/**
- * Estilos para el contenedor de las villas (`.villas-container`).
- *
- * El contenedor de las villas utiliza Flexbox para organizar los elementos de manera
- * flexible en filas. También permite que los elementos se ajusten y envuelvan
- * dentro del contenedor.
- */
 .villas-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-/**
- * Estilos para cada elemento de la villa (`.villa-item`).
- *
- * Cada villa es un elemento flexible que ocupa un porcentaje específico del ancho,
- * y su contenido se organiza en columna, con los elementos centrados tanto horizontal
- * como verticalmente.
- */
 .villa-item {
   flex: 1 1 calc(20% - 20px);
   display: flex;
@@ -853,12 +592,6 @@ footer p {
   overflow: hidden;
 }
 
-/**
- * Estilos para las imágenes dentro de cada villa (`.villa-item img`).
- *
- * La imagen ocupa todo el ancho del contenedor y ajusta su altura de manera automática.
- * Además, se aplica una transición para un efecto de transformación suave cuando se pasa el cursor.
- */
 .villa-item img {
   width: 100%;
   height: auto;
@@ -867,23 +600,11 @@ footer p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/**
- * Efecto hover sobre las imágenes de las villas (`.villa-item img:hover`).
- *
- * Al pasar el cursor sobre la imagen, se aplica un efecto de escala, aumentando su tamaño
- * ligeramente para generar una interacción visual atractiva.
- */
 .villa-item img:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/**
- * Estilos para el texto de cada villa (`.villa-item p`).
- *
- * El texto es grande, en negrita y se encuentra en mayúsculas. Se aplica un color
- * dorado y un margen para separar el texto de la imagen.
- */
 .villa-item p {
   font-size: 2.2rem;
   font-weight: bold;
@@ -891,12 +612,6 @@ footer p {
   margin-bottom: 1rem;
   color: #b9975b;
   margin-top: 1rem;
-  /**
-   * Estilos para pantallas pequeñas.
-   *
-   * En pantallas pequeñas, el tamaño de la fuente se reduce para mejorar la legibilidad
-   * y optimizar el espacio en pantalla.
-   */
 }
 @media (max-width: 666px) {
   .villa-item p {
@@ -904,17 +619,6 @@ footer p {
   }
 }
 
-/**
- * Contenedor de las tarjetas.
- *
- * Este contenedor usa Flexbox para distribuir las tarjetas de manera flexible.
- * Las tarjetas se ajustan a diferentes tamaños de pantalla con un diseño responsive.
- *
- * @mixin flex() Aplica propiedades básicas de flexbox.
- * @mixin media(small) Aplica estilos para pantallas pequeñas.
- * @mixin media(medium) Aplica estilos para pantallas medianas.
- * @mixin media(large) Aplica estilos para pantallas grandes.
- */
 .card-container {
   display: flex;
   flex-direction: row;
@@ -922,24 +626,6 @@ footer p {
   align-items: center;
   flex-wrap: wrap;
   gap: 1.25rem;
-  /**
-   * Estilos para pantallas pequeñas.
-   *
-   * En pantallas pequeñas, el contenedor de las tarjetas cambia a una
-   * disposición en columna y se reduce el espacio entre los elementos.
-   */
-  /**
-   * Estilos para pantallas medianas.
-   *
-   * En pantallas medianas, el contenedor se organiza horizontalmente
-   * y se ajusta el espacio entre los elementos.
-   */
-  /**
-   * Estilos para pantallas grandes.
-   *
-   * En pantallas grandes, el contenedor mantiene una disposición horizontal
-   * con un espacio más amplio entre las tarjetas.
-   */
 }
 @media (max-width: 666px) {
   .card-container {
@@ -960,13 +646,6 @@ footer p {
   }
 }
 
-/**
- * Estilo para cada tarjeta dentro del contenedor.
- *
- * Define las dimensiones y el comportamiento visual de las tarjetas.
- * Las tarjetas tienen un comportamiento de rotación y transición cuando se
- * hace hover sobre ellas.
- */
 .card-item {
   position: relative;
   width: 30rem;
@@ -976,40 +655,6 @@ footer p {
   border-radius: 0.9rem;
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /**
-   * Estilos para pantallas pequeñas.
-   *
-   * En pantallas pequeñas, las tarjetas ocupan el 100% del ancho disponible
-   * y tienen altura automática.
-   */
-  /**
-   * Estilos para pantallas medianas.
-   *
-   * En pantallas medianas, las tarjetas tienen un tamaño más pequeño.
-   */
-  /**
-   * Estilos para pantallas grandes.
-   *
-   * En pantallas grandes, las tarjetas mantienen su tamaño original.
-   */
-  /**
-   * Estilo para la imagen dentro de la tarjeta.
-   *
-   * La imagen ocupa todo el espacio disponible, cubriendo el área de la tarjeta
-   * con un efecto de transición de rotación.
-   */
-  /**
-   * Estilo para el texto de la tarjeta.
-   *
-   * El texto está posicionado de manera absoluta en el centro de la tarjeta,
-   * pero inicialmente está oculto y solo aparece cuando se hace hover sobre la tarjeta.
-   */
-  /**
-   * Comportamiento al pasar el cursor (hover).
-   *
-   * Cuando el usuario hace hover sobre la tarjeta, la imagen rota y el texto
-   * aparece con una transición suave.
-   */
 }
 @media (max-width: 666px) {
   .card-item {
@@ -1066,45 +711,10 @@ footer p {
   z-index: 2;
 }
 
-/**
- * Estilos para el contenedor principal del pie de página (`.footer-wrapper`).
- *
- * Este contenedor utiliza **Flexbox** para organizar su contenido en columna,
- * garantizando que el pie de página siempre tenga al menos el 100% de la altura
- * de la ventana.
- */
 .footer-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /**
-   * Estilos para el contenedor del pie de página (`.footer-container`).
-   *
-   * El contenedor está diseñado para distribuir las secciones del pie de página
-   * de manera flexible y alinearlas con espacio entre ellas.
-   */
-  /**
-   * Estilo para la sección inferior del pie de página (`.footer-bottom`).
-   *
-   * Esta sección se centra y tiene un estilo más pequeño para la fuente.
-   */
-  /**
-   * Estilos para pantallas pequeñas.
-   *
-   * Se añaden cambios de diseño si es necesario para pantallas pequeñas.
-   */
-  /**
-   * Estilos para pantallas medianas.
-   *
-   * En pantallas medianas, el pie de página cambia la disposición de las secciones
-   * y ajusta el tamaño de la fuente en la parte inferior.
-   */
-  /**
-   * Estilos para pantallas grandes.
-   *
-   * En pantallas grandes, el pie de página vuelve a la disposición en fila.
-   * Además, se ajusta el tamaño de la fuente en la parte inferior.
-   */
 }
 .footer-wrapper .footer-container {
   display: flex;
@@ -1114,12 +724,6 @@ footer p {
   margin-bottom: 2rem;
   flex-wrap: wrap;
   flex-grow: 1;
-  /**
-   * Estilos para cada sección dentro del pie de página (`.footer-section`).
-   *
-   * Cada sección ocupa un espacio flexible y tiene un tamaño mínimo
-   * para garantizar que no se colapsen.
-   */
 }
 .footer-wrapper .footer-container .footer-section {
   flex: 1;
@@ -1127,21 +731,6 @@ footer p {
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
   color: #fff;
-  /**
-   * Estilo para el título de cada sección (`h3`).
-   *
-   * El título es de tamaño medio y en negrita.
-   */
-  /**
-   * Estilo para los párrafos dentro de cada sección (`p`).
-   *
-   * El tamaño de fuente es más pequeño para los párrafos.
-   */
-  /**
-   * Estilo para la lista de redes sociales (`ul.social-list`).
-   *
-   * La lista es horizontal, sin puntos de lista, y contiene iconos de redes sociales.
-   */
 }
 .footer-wrapper .footer-container .footer-section h3 {
   font-size: 1.2rem;
@@ -1155,37 +744,18 @@ footer p {
   list-style: none;
   padding: 0;
   display: flex;
-  /**
-   * Estilos para cada ítem de la lista de redes sociales (`li`).
-   *
-   * Se establece un margen derecho entre los iconos.
-   */
 }
 .footer-wrapper .footer-container .footer-section ul.social-list li {
   margin-right: 10px;
-  /**
-   * Estilos para los enlaces dentro de la lista (`a`).
-   *
-   * Cada enlace es un bloque en línea para el control del espacio.
-   */
 }
 .footer-wrapper .footer-container .footer-section ul.social-list li a {
   display: inline-block;
-  /**
-   * Estilos para las imágenes dentro de los enlaces (`img`).
-   *
-   * Las imágenes tienen un tamaño fijo y un efecto de transición
-   * para aumentar ligeramente el tamaño cuando el usuario pasa el cursor.
-   */
 }
 .footer-wrapper .footer-container .footer-section ul.social-list li a img {
   width: 24px;
   height: 24px;
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /**
-   * Efecto hover: la imagen aumenta ligeramente de tamaño.
-   */
 }
 .footer-wrapper .footer-container .footer-section ul.social-list li a img:hover {
   transform: scale(1.1);

@@ -1,22 +1,18 @@
-/**
- * Estilos para el componente de navegación (`.nav`).
- *
- * El contenedor de la navegación se posiciona en la cuadrícula y ocupa un rango de columnas
- * y filas específicos. Además, se aplica un `z-index` para asegurar que se apile encima de otros elementos.
- */
- .nav {
+/// Estilos para el componente de navegación (`.nav`).
+/// 
+/// El contenedor de la navegación se posiciona en la cuadrícula y ocupa un rango de columnas
+/// y filas específicos. Además, se aplica un `z-index` para asegurar que se apile encima de otros elementos.
+.nav {
     grid-column: 2 / 9; 
     grid-row: 2 / 3; 
 
     z-index: 101;
     padding-bottom: 2rem;
 
-    /**
-     * Estilos para la lista de navegación (`.nav-list`).
-     *
-     * La lista se muestra sin estilo de lista predeterminado y se organiza con Flexbox,
-     * permitiendo una distribución horizontal de los elementos.
-     */
+    /// Estilos para la lista de navegación (`.nav-list`).
+    /// 
+    /// La lista se muestra sin estilo de lista predeterminado y se organiza con Flexbox,
+    /// permitiendo una distribución horizontal de los elementos.
     &-list {
         list-style-type: none;
         @include flex(); 
@@ -24,16 +20,12 @@
         padding: 0; 
         margin: 0;
 
-        /**
-         * Estilos para los elementos de la lista de navegación (`.nav-item`).
-         */
+        /// Estilos para los elementos de la lista de navegación (`.nav-item`).
         .nav-item {
-            /**
-             * Estilos para el primer enlace de navegación (`a.first-nav-link`).
-             *
-             * Se aplican estilos específicos al enlace de la lista, como el color, el peso de la fuente,
-             * y la transformación de texto. Además, se incluye un efecto hover para cambiar el color.
-             */
+            /// Estilos para el primer enlace de navegación (`a.first-nav-link`).
+            /// 
+            /// Se aplican estilos específicos al enlace de la lista, como el color, el peso de la fuente,
+            /// y la transformación de texto. Además, se incluye un efecto hover para cambiar el color.
             a.first-nav-link {
                 text-decoration: none; 
                 color: color(terciary); 
@@ -42,12 +34,10 @@
                 letter-spacing: 0.2rem; 
                 transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 
-                /**
-                 * Efecto hover sobre el enlace.
-                 *
-                 * Al pasar el cursor sobre el enlace, cambia su color a un tono de rojo más oscuro.
-                 */
-                 &:hover {
+                /// Efecto hover sobre el enlace.
+                /// 
+                /// Al pasar el cursor sobre el enlace, cambia su color a un tono de rojo más oscuro.
+                &:hover {
                     color: darkred; 
                     transform: scale(1.1); 
                 } 
@@ -55,13 +45,11 @@
         }
     }
 
-    /**
-     * Estilos para pantallas pequeñas (`small`).
-     *
-     * En pantallas pequeñas, el contenedor de la navegación ocupa toda la anchura de la cuadrícula
-     * y se ajustan los estilos para mejorar la usabilidad en dispositivos pequeños.
-     */
-     @include media(small) {
+    /// Estilos para pantallas pequeñas (`small`).
+    /// 
+    /// En pantallas pequeñas, el contenedor de la navegación ocupa toda la anchura de la cuadrícula
+    /// y se ajustan los estilos para mejorar la usabilidad en dispositivos pequeños.
+    @include media(small) {
         grid-column: 1 / -1; 
         padding-bottom: 1rem; 
         justify-self: start; 
@@ -73,13 +61,10 @@
             flex-wrap: wrap; 
         }
     }
-    
 
-    /**
-     * Estilos para pantallas medianas (`medium`).
-     *
-     * En pantallas medianas, se ajustan los márgenes y el espaciado entre los elementos.
-     */
+    /// Estilos para pantallas medianas (`medium`).
+    /// 
+    /// En pantallas medianas, se ajustan los márgenes y el espaciado entre los elementos.
     @include media(medium) {
         grid-column: 1 / -1;
         padding-bottom: 1.5rem; 
@@ -90,12 +75,10 @@
         }
     }
 
-    /**
-     * Estilos para pantallas grandes (`large`).
-     *
-     * En pantallas grandes, el contenedor de la navegación vuelve a ocupar un rango específico de columnas
-     * y se ajusta el espaciado y el margen para una mejor disposición.
-     */
+    /// Estilos para pantallas grandes (`large`).
+    /// 
+    /// En pantallas grandes, el contenedor de la navegación vuelve a ocupar un rango específico de columnas
+    /// y se ajusta el espaciado y el margen para una mejor disposición.
     @include media(large) {
         grid-column: 2 / 10;
         padding-bottom: 2.5rem; 

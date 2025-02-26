@@ -1,22 +1,18 @@
-/**
- * Estilos para el contenedor de las villas (`.villas-container`).
- *
- * El contenedor de las villas utiliza Flexbox para organizar los elementos de manera
- * flexible en filas. También permite que los elementos se ajusten y envuelvan
- * dentro del contenedor.
- */
- .villas-container {
+/// Estilos para el contenedor de las villas (`.villas-container`).
+/// 
+/// El contenedor de las villas utiliza Flexbox para organizar los elementos de manera
+/// flexible en filas. También permite que los elementos se ajusten y envuelvan
+/// dentro del contenedor.
+.villas-container {
     display: flex; 
     flex-wrap: wrap; 
 }
 
-/**
- * Estilos para cada elemento de la villa (`.villa-item`).
- *
- * Cada villa es un elemento flexible que ocupa un porcentaje específico del ancho,
- * y su contenido se organiza en columna, con los elementos centrados tanto horizontal
- * como verticalmente.
- */
+/// Estilos para cada elemento de la villa (`.villa-item`).
+/// 
+/// Cada villa es un elemento flexible que ocupa un porcentaje específico del ancho,
+/// y su contenido se organiza en columna, con los elementos centrados tanto horizontal
+/// como verticalmente.
 .villa-item {
     flex: 1 1 calc(20% - 20px); 
     display: flex;
@@ -26,12 +22,10 @@
     overflow: hidden; 
 }
 
-/**
- * Estilos para las imágenes dentro de cada villa (`.villa-item img`).
- *
- * La imagen ocupa todo el ancho del contenedor y ajusta su altura de manera automática.
- * Además, se aplica una transición para un efecto de transformación suave cuando se pasa el cursor.
- */
+/// Estilos para las imágenes dentro de cada villa (`.villa-item img`).
+/// 
+/// La imagen ocupa todo el ancho del contenedor y ajusta su altura de manera automática.
+/// Además, se aplica una transición para un efecto de transformación suave cuando se pasa el cursor.
 .villa-item img {
     width: 100%;
     height: auto;
@@ -40,23 +34,19 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/**
- * Efecto hover sobre las imágenes de las villas (`.villa-item img:hover`).
- *
- * Al pasar el cursor sobre la imagen, se aplica un efecto de escala, aumentando su tamaño
- * ligeramente para generar una interacción visual atractiva.
- */
+/// Efecto hover sobre las imágenes de las villas (`.villa-item img:hover`).
+/// 
+/// Al pasar el cursor sobre la imagen, se aplica un efecto de escala, aumentando su tamaño
+/// ligeramente para generar una interacción visual atractiva.
 .villa-item img:hover {
     transform: scale(1.1); 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/**
- * Estilos para el texto de cada villa (`.villa-item p`).
- *
- * El texto es grande, en negrita y se encuentra en mayúsculas. Se aplica un color
- * dorado y un margen para separar el texto de la imagen.
- */
+/// Estilos para el texto de cada villa (`.villa-item p`).
+/// 
+/// El texto es grande, en negrita y se encuentra en mayúsculas. Se aplica un color
+/// dorado y un margen para separar el texto de la imagen.
 .villa-item p {
     font-size: 2.2rem; 
     font-weight: bold; 
@@ -65,12 +55,10 @@
     color: #b9975b; 
     margin-top: 1rem; 
 
-    /**
-     * Estilos para pantallas pequeñas.
-     *
-     * En pantallas pequeñas, el tamaño de la fuente se reduce para mejorar la legibilidad
-     * y optimizar el espacio en pantalla.
-     */
+    /// Estilos para pantallas pequeñas.
+    /// 
+    /// En pantallas pequeñas, el tamaño de la fuente se reduce para mejorar la legibilidad
+    /// y optimizar el espacio en pantalla.
     @include media(small) {
         font-size: 1.2rem;  
     }

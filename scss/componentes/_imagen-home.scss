@@ -1,20 +1,18 @@
-/**
- * Estilos para el contenedor de la imagen (`.image`).
- *
- * El contenedor ocupa todo el ancho y la altura del grid en la fila 1.
- * Se asegura de que la imagen ocupe todo el espacio disponible.
- */
- .image {
+/// Estilos para el contenedor de la imagen (`.image`).
+/// 
+/// El contenedor ocupa todo el ancho y la altura del grid en la fila 1.
+/// Se asegura de que la imagen ocupe todo el espacio disponible.
+.image {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     width: 100%; 
     height: 100%;
 
-    /**
-     * Estilos para la imagen dentro del contenedor (`img`).
-     *
-     * La imagen se ajusta al 100% del contenedor y mantiene una proporción de cobertura.
-     */
+    /// Estilos para la imagen dentro del contenedor (`img`).
+    /// 
+    /// La imagen se ajusta al 100% del contenedor y mantiene una proporción
+    /// de cobertura, asegurando que ocupe todo el espacio del contenedor
+    /// sin perder la proporción de la imagen.
     img {
         width: 100%; 
         height: 100%;

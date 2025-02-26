@@ -1,21 +1,17 @@
-/**
- * Estilos para el contenedor principal del pie de página (`.footer-wrapper`).
- *
- * Este contenedor utiliza **Flexbox** para organizar su contenido en columna,
- * garantizando que el pie de página siempre tenga al menos el 100% de la altura
- * de la ventana.
- */
- .footer-wrapper {
+/// Estilos para el contenedor principal del pie de página (`.footer-wrapper`).
+/// 
+/// Este contenedor utiliza **Flexbox** para organizar su contenido en columna,
+/// garantizando que el pie de página siempre tenga al menos el 100% de la altura
+/// de la ventana.
+.footer-wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh;
 
-    /**
-     * Estilos para el contenedor del pie de página (`.footer-container`).
-     *
-     * El contenedor está diseñado para distribuir las secciones del pie de página
-     * de manera flexible y alinearlas con espacio entre ellas.
-     */
+    /// Estilos para el contenedor del pie de página (`.footer-container`).
+    /// 
+    /// El contenedor está diseñado para distribuir las secciones del pie de página
+    /// de manera flexible y alinearlas con espacio entre ellas.
     .footer-container {
         display: flex; 
         justify-content: space-between;
@@ -25,12 +21,10 @@
         flex-wrap: wrap; 
         flex-grow: 1; 
 
-        /**
-         * Estilos para cada sección dentro del pie de página (`.footer-section`).
-         *
-         * Cada sección ocupa un espacio flexible y tiene un tamaño mínimo
-         * para garantizar que no se colapsen.
-         */
+        /// Estilos para cada sección dentro del pie de página (`.footer-section`).
+        /// 
+        /// Cada sección ocupa un espacio flexible y tiene un tamaño mínimo
+        /// para garantizar que no se colapsen.
         .footer-section {
             flex: 1; 
             min-width: 200px; 
@@ -38,67 +32,53 @@
             margin-bottom: 1.5rem;
             color: #fff; 
 
-            /**
-             * Estilo para el título de cada sección (`h3`).
-             *
-             * El título es de tamaño medio y en negrita.
-             */
+            /// Estilo para el título de cada sección (`h3`).
+            /// 
+            /// El título es de tamaño medio y en negrita.
             h3 {
                 font-size: 1.2rem;
                 margin-bottom: 1rem;
                 font-weight: bold; 
             }
 
-            /**
-             * Estilo para los párrafos dentro de cada sección (`p`).
-             *
-             * El tamaño de fuente es más pequeño para los párrafos.
-             */
+            /// Estilo para los párrafos dentro de cada sección (`p`).
+            /// 
+            /// El tamaño de fuente es más pequeño para los párrafos.
             p {
                 font-size: 0.9rem;
             }
 
-            /**
-             * Estilo para la lista de redes sociales (`ul.social-list`).
-             *
-             * La lista es horizontal, sin puntos de lista, y contiene iconos de redes sociales.
-             */
+            /// Estilo para la lista de redes sociales (`ul.social-list`).
+            /// 
+            /// La lista es horizontal, sin puntos de lista, y contiene iconos de redes sociales.
             ul.social-list {
                 list-style: none;
                 padding: 0; 
                 display: flex;
 
-                /**
-                 * Estilos para cada ítem de la lista de redes sociales (`li`).
-                 *
-                 * Se establece un margen derecho entre los iconos.
-                 */
+                /// Estilos para cada ítem de la lista de redes sociales (`li`).
+                /// 
+                /// Se establece un margen derecho entre los iconos.
                 li {
                     margin-right: 10px; 
 
-                    /**
-                     * Estilos para los enlaces dentro de la lista (`a`).
-                     *
-                     * Cada enlace es un bloque en línea para el control del espacio.
-                     */
+                    /// Estilos para los enlaces dentro de la lista (`a`).
+                    /// 
+                    /// Cada enlace es un bloque en línea para el control del espacio.
                     a {
                         display: inline-block;
 
-                        /**
-                         * Estilos para las imágenes dentro de los enlaces (`img`).
-                         *
-                         * Las imágenes tienen un tamaño fijo y un efecto de transición
-                         * para aumentar ligeramente el tamaño cuando el usuario pasa el cursor.
-                         */
+                        /// Estilos para las imágenes dentro de los enlaces (`img`).
+                        /// 
+                        /// Las imágenes tienen un tamaño fijo y un efecto de transición
+                        /// para aumentar ligeramente el tamaño cuando el usuario pasa el cursor.
                         img {
                             width: 24px;
                             height: 24px;
                             transition: transform 0.3s, box-shadow 0.3s;
                             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-                            /**
-                             * Efecto hover: la imagen aumenta ligeramente de tamaño.
-                             */
+                            /// Efecto hover: la imagen aumenta ligeramente de tamaño.
                             &:hover {
                                 transform: scale(1.1); 
                                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -110,11 +90,9 @@
         }
     }
 
-    /**
-     * Estilo para la sección inferior del pie de página (`.footer-bottom`).
-     *
-     * Esta sección se centra y tiene un estilo más pequeño para la fuente.
-     */
+    /// Estilo para la sección inferior del pie de página (`.footer-bottom`).
+    /// 
+    /// Esta sección se centra y tiene un estilo más pequeño para la fuente.
     .footer-bottom {
         text-align: center; 
         font-size: 0.85rem;
@@ -123,21 +101,17 @@
         border-top: 1px solid #444;
     }
 
-    /**
-     * Estilos para pantallas pequeñas.
-     *
-     * Se añaden cambios de diseño si es necesario para pantallas pequeñas.
-     */
+    /// Estilos para pantallas pequeñas.
+    /// 
+    /// Se añaden cambios de diseño si es necesario para pantallas pequeñas.
     @include media(small) {
         // Agregar estilos para pantallas pequeñas si es necesario.
     }
 
-    /**
-     * Estilos para pantallas medianas.
-     *
-     * En pantallas medianas, el pie de página cambia la disposición de las secciones
-     * y ajusta el tamaño de la fuente en la parte inferior.
-     */
+    /// Estilos para pantallas medianas.
+    /// 
+    /// En pantallas medianas, el pie de página cambia la disposición de las secciones
+    /// y ajusta el tamaño de la fuente en la parte inferior.
     @include media(medium) {
         .footer-container {
             flex-direction: column; 
@@ -154,12 +128,10 @@
         }
     }
 
-    /**
-     * Estilos para pantallas grandes.
-     *
-     * En pantallas grandes, el pie de página vuelve a la disposición en fila.
-     * Además, se ajusta el tamaño de la fuente en la parte inferior.
-     */
+    /// Estilos para pantallas grandes.
+    /// 
+    /// En pantallas grandes, el pie de página vuelve a la disposición en fila.
+    /// Además, se ajusta el tamaño de la fuente en la parte inferior.
     @include media(large) {
         .footer-container {
             flex-direction: row; 

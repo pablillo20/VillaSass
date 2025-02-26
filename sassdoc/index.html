@@ -1,0 +1,1201 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Pruebassass - v1.0.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Pruebassass - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="Release the docs!"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Pruebassass - 1.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="colors"><a href="#colors">colors</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="colors-variable"><a href="#colors-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="colors" data-name="colors" data-type="variable"><a href="#colors-variable-colors">colors</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="global"><a href="#global">global</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="global-css"><a href="#global-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="global" data-name="*, *::after, *::before" data-type="css"><a href="#global-css-*, *::after, *::before">*, *::after, *::before</a></li><li class="sidebar__item sassdoc__item" data-group="global" data-name="html" data-type="css"><a href="#global-css-html">html</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="layout"><a href="#layout">layout</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-css"><a href="#layout-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="layout" data-name=".container" data-type="css"><a href="#layout-css-.container">.container</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="media queries"><a href="#media queries">media queries</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="media queries-variable"><a href="#media queries-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="media queries" data-name="breakpoints" data-type="variable"><a href="#media queries-variable-breakpoints">breakpoints</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="typography"><a href="#typography">typography</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="typography-variable"><a href="#typography-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="typography" data-name="font-sizes" data-type="variable"><a href="#typography-variable-font-sizes">font-sizes</a></li><li class="sidebar__item sassdoc__item" data-group="typography" data-name="font-family" data-type="variable"><a href="#typography-variable-font-family">font-family</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="genera-cabeceras" data-type="mixin"><a href="#undefined-mixin-genera-cabeceras">genera-cabeceras</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="flex" data-type="mixin"><a href="#undefined-mixin-flex">flex</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="media" data-type="mixin"><a href="#undefined-mixin-media">media</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="fafaIcons" data-type="mixin"><a href="#undefined-mixin-fafaIcons">fafaIcons</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="color" data-type="function"><a href="#undefined-function-color">color</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="size" data-type="function"><a href="#undefined-function-size">size</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="breakpoint" data-type="function"><a href="#undefined-function-breakpoint">breakpoint</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-css"><a href="#undefined-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".card-container" data-type="css"><a href="#undefined-css-.card-container">.card-container</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".card-item" data-type="css"><a href="#undefined-css-.card-item">.card-item</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="img" data-type="css"><a href="#undefined-css-img">img</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".card-text" data-type="css"><a href="#undefined-css-.card-text">.card-text</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="&amp;:hover" data-type="css"><a href="#undefined-css-&amp;:hover">&amp;:hover</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".content" data-type="css"><a href="#undefined-css-.content">.content</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".title" data-type="css"><a href="#undefined-css-.title">.title</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".description" data-type="css"><a href="#undefined-css-.description">.description</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".cta-button" data-type="css"><a href="#undefined-css-.cta-button">.cta-button</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="&amp;:hover" data-type="css"><a href="#undefined-css-&amp;:hover">&amp;:hover</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".footer-wrapper" data-type="css"><a href="#undefined-css-.footer-wrapper">.footer-wrapper</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".footer-container" data-type="css"><a href="#undefined-css-.footer-container">.footer-container</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".footer-section" data-type="css"><a href="#undefined-css-.footer-section">.footer-section</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="h3" data-type="css"><a href="#undefined-css-h3">h3</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="p" data-type="css"><a href="#undefined-css-p">p</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="ul.social-list" data-type="css"><a href="#undefined-css-ul.social-list">ul.social-list</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="li" data-type="css"><a href="#undefined-css-li">li</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="a" data-type="css"><a href="#undefined-css-a">a</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="img" data-type="css"><a href="#undefined-css-img">img</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="&amp;:hover" data-type="css"><a href="#undefined-css-&amp;:hover">&amp;:hover</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".footer-bottom" data-type="css"><a href="#undefined-css-.footer-bottom">.footer-bottom</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".heading" data-type="css"><a href="#undefined-css-.heading">.heading</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="&amp;-text" data-type="css"><a href="#undefined-css-&amp;-text">&amp;-text</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="&amp;:hover" data-type="css"><a href="#undefined-css-&amp;:hover">&amp;:hover</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".image" data-type="css"><a href="#undefined-css-.image">.image</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="img" data-type="css"><a href="#undefined-css-img">img</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".info-contenedor" data-type="css"><a href="#undefined-css-.info-contenedor">.info-contenedor</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="&amp;-tarjeta" data-type="css"><a href="#undefined-css-&amp;-tarjeta">&amp;-tarjeta</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="img" data-type="css"><a href="#undefined-css-img">img</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="h3" data-type="css"><a href="#undefined-css-h3">h3</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="p" data-type="css"><a href="#undefined-css-p">p</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".logo" data-type="css"><a href="#undefined-css-.logo">.logo</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="&amp;-img" data-type="css"><a href="#undefined-css-&amp;-img">&amp;-img</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".nav" data-type="css"><a href="#undefined-css-.nav">.nav</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="&amp;-list" data-type="css"><a href="#undefined-css-&amp;-list">&amp;-list</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".nav-item" data-type="css"><a href="#undefined-css-.nav-item">.nav-item</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="a.first-nav-link" data-type="css"><a href="#undefined-css-a.first-nav-link">a.first-nav-link</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="&amp;:hover" data-type="css"><a href="#undefined-css-&amp;:hover">&amp;:hover</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".villas-container" data-type="css"><a href="#undefined-css-.villas-container">.villas-container</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".villa-item" data-type="css"><a href="#undefined-css-.villa-item">.villa-item</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".villa-item img" data-type="css"><a href="#undefined-css-.villa-item img">.villa-item img</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".villa-item img:hover" data-type="css"><a href="#undefined-css-.villa-item img:hover">.villa-item img:hover</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".villa-item p" data-type="css"><a href="#undefined-css-.villa-item p">.villa-item p</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="colors"><div class="container">colors</div></h1><section class="main__sub-section" id="colors-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="colors-variable-colors"><h3 class="item__heading"><a class="item__name" href="#colors-variable-colors">colors</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$colors: (
+    primary: black,
+    secondary:  rgba(218, 165, 32, 0.5),
+    tertiary: white,
+    quaternary: rgb(237, 221, 221),
+    quinta: rgb(111, 109, 34)
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Paleta de colores utilizada en el proyecto.</p><p>Los colores se definen como variables de Sass para facilitar su reutilización a través del proyecto.</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-color"><code>color</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="global"><div class="container">global</div></h1><section class="main__sub-section" id="global-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="global-css-*, *::after, *::before"><h3 class="item__heading"><a class="item__name" href="#global-css-*, *::after, *::before">*, *::after, *::before</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>*, *::after, *::before {
+  margin: 0; 
+    padding: 0;
+    font-family: $font-family; 
+    box-sizing: border-box;
+}</code>" data-collapsed="*, *::after, *::before { ... }"><code>*, *::after, *::before { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos globales aplicados a todos los elementos (<code>*</code>), pseudo-elementos <code>::after</code> y <code>::before</code>.</p><p>Estos estilos resetearán el margen y el padding predeterminado, establecerán una tipografía común y activarán el modelo de caja <strong>border-box</strong> para todos los elementos.</p></div></section><section class="main__item container item" id="global-css-html"><h3 class="item__heading"><a class="item__name" href="#global-css-html">html</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>html {
+  font-size: 62.5%;
+}</code>" data-collapsed="html { ... }"><code>html { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el elemento <code>html</code>.</p><p>Se ajusta el tamaño de la fuente base al 62.5% para facilitar el cálculo de unidades rem.</p></div></section></section></section><section class="main__section"><h1 class="main__heading" id="layout"><div class="container">layout</div></h1><section class="main__sub-section" id="layout-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="layout-css-.container"><h3 class="item__heading"><a class="item__name" href="#layout-css-.container">.container</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.container {
+  display: grid; 
+    grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr); 
+    grid-template-rows: repeat(4, min-content);
+    grid-row-gap: 1.6rem; 
+    background-color: color(tertiary);
+}</code>" data-collapsed=".container { ... }"><code>.container { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el contenedor principal (<code>.container</code>).</p><p>Este contenedor utiliza el sistema de <strong>grid</strong> para organizar el contenido.</p></div></section></section></section><section class="main__section"><h1 class="main__heading" id="media queries"><div class="container">media queries</div></h1><section class="main__sub-section" id="media queries-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="media queries-variable-breakpoints"><h3 class="item__heading"><a class="item__name" href="#media queries-variable-breakpoints">breakpoints</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$breakpoints: (
+    small: 666px,
+    medium: 768px,
+    large: 1024px
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoints utilizados para las consultas de medios.</p><p>Se definen tamaños para los diferentes dispositivos (small, medium, large) para adaptar el diseño.</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-breakpoint"><code>breakpoint</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="typography"><div class="container">typography</div></h1><section class="main__sub-section" id="typography-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="typography-variable-font-sizes"><h3 class="item__heading"><a class="item__name" href="#typography-variable-font-sizes">font-sizes</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$font-sizes: (
+    xxl: 6rem,
+    xl: 6rem,
+    lg: 2.5rem,
+    md: 2rem,
+    sm: 1.8rem,
+    xs: 1.6rem
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Tamaños de fuente utilizados para los diferentes niveles de cabeceras y textos.</p><p>Los tamaños de fuente se definen en un mapa <code>$font-sizes</code> para facilitar su gestión.</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-size"><code>size</code></a></li></ul></section><section class="main__item container item" id="typography-variable-font-family"><h3 class="item__heading"><a class="item__name" href="#typography-variable-font-family">font-family</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$font-family: &#39;Nunito&#39;, sans-serif;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Fuente principal utilizada en el proyecto.</p><p>La fuente <code>Nunito</code> se aplica globalmente en todo el proyecto.</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-genera-cabeceras"><code>genera-cabeceras</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="undefined-mixin-genera-cabeceras"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-genera-cabeceras">genera-cabeceras</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin genera-cabeceras($level, $color) { 
+    font-size: size($level); 
+    color: color($color); 
+    font-family: $font-family; 
+ }" data-collapsed="@mixin genera-cabeceras($level, $color) { ... }"><code>@mixin genera-cabeceras($level, $color) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin para generar cabeceras (<code>h1</code> a <code>h6</code>) con diferentes tamaños y colores.</p><p>Este mixin se encarga de aplicar el tamaño de fuente y color según el nivel de la cabecera (<code>h1</code> a <code>h6</code>), utilizando un esquema de colores y tamaños predefinidos.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$level</code></th><td data-label="desc"><p>El nivel de la cabecera (1 a 6).</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>El color de la cabecera (puede ser uno de los valores definidos como &#39;primary&#39;, &#39;secondary&#39;, etc.).</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-size"><code>size</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-color"><code>color</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#typography-variable-font-family"><code>font-family</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-flex"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-flex">flex</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin flex($direction, $justify, $align) { 
+    display: flex; 
+    flex-direction: $direction; 
+    justify-content: $justify; 
+    align-items: $align; 
+ }" data-collapsed="@mixin flex($direction, $justify, $align) { ... }"><code>@mixin flex($direction, $justify, $align) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin para crear un contenedor flex.</p><p>Este mixin crea un contenedor con el modelo <strong>Flexbox</strong> para alinear y distribuir los elementos de acuerdo con las opciones proporcionadas (dirección, justificación y alineación).</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$direction</code></th><td data-label="desc"><p>La dirección del eje principal (por defecto es <code>row</code>). Puede ser <code>row</code> o <code>column</code>.</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$justify</code></th><td data-label="desc"><p>Cómo justificar los elementos a lo largo del eje principal (por defecto es <code>center</code>).</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$align</code></th><td data-label="desc"><p>Cómo alinear los elementos a lo largo del eje transversal (por defecto es <code>center</code>).</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table></section><section class="main__item container item" id="undefined-mixin-media"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-media">media</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin media($size) { 
+    @media (max-width: breakpoint($size)) {
+        @content; 
+    }
+ }" data-collapsed="@mixin media($size) { ... }"><code>@mixin media($size) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin para aplicar estilos específicos para diferentes tamaños de pantalla (media queries).</p><p>Utiliza el mixin <code>media</code> para envolver contenido dentro de una consulta de medios que se activará cuando el tamaño de la pantalla sea menor o igual a un determinado breakpoint.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc"><p>El tamaño de la pantalla (puede ser uno de los valores definidos como &#39;small&#39;, &#39;medium&#39;, etc.).</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-breakpoint"><code>breakpoint</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-fafaIcons"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-fafaIcons">fafaIcons</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fafaIcons($color, $font-size) { 
+    i {
+        font-size: $font-size; 
+        margin-right: 1%; 
+        color: $color; 
+    }
+ }" data-collapsed="@mixin fafaIcons($color, $font-size) { ... }"><code>@mixin fafaIcons($color, $font-size) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin para agregar estilos a los íconos de FontAwesome.</p><p>Este mixin aplica estilos personalizados a los íconos de FontAwesome, incluyendo el tamaño de la fuente y el color, permitiendo que sean fácilmente reutilizados en toda la aplicación.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>El color de los íconos (por defecto es <code>quinta</code>).</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$font-size</code></th><td data-label="desc"><p>El tamaño de la fuente de los íconos (por defecto es <code>1.5rem</code>).</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table></section></section><section class="main__sub-section" id="undefined-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="undefined-function-color"><h3 class="item__heading"><a class="item__name" href="#undefined-function-color">color</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function color($color-name) { 
+    @return map-get($colors, $color-name);
+ }" data-collapsed="@function color($color-name) { ... }"><code>@function color($color-name) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Función que devuelve un color según su nombre.</p><p>Esta función toma el nombre de un color definido en la paleta <code>$colors</code> y devuelve su valor.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color-name</code></th><td data-label="desc"><p>El nombre del color (por ejemplo, &#39;primary&#39;, &#39;secondary&#39;, etc.).</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Color</code> &mdash;<p>El valor del color asociado.</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#colors-variable-colors"><code>colors</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-genera-cabeceras"><code>genera-cabeceras</code></a></li></ul></section><section class="main__item container item" id="undefined-function-size"><h3 class="item__heading"><a class="item__name" href="#undefined-function-size">size</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function size($size) { 
+    @return map-get($font-sizes, $size);
+ }" data-collapsed="@function size($size) { ... }"><code>@function size($size) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Función que devuelve un tamaño de fuente según el tamaño especificado.</p><p>Esta función toma el nombre de un tamaño (por ejemplo, &#39;xxl&#39;, &#39;xl&#39;, etc.) y devuelve su valor.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc"><p>El nombre del tamaño (por ejemplo, &#39;xxl&#39;, &#39;xl&#39;, etc.).</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>String</code> &mdash;<p>El tamaño de la fuente correspondiente.</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#typography-variable-font-sizes"><code>font-sizes</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-genera-cabeceras"><code>genera-cabeceras</code></a></li></ul></section><section class="main__item container item" id="undefined-function-breakpoint"><h3 class="item__heading"><a class="item__name" href="#undefined-function-breakpoint">breakpoint</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function breakpoint($size) { 
+    @return map-get($breakpoints, $size);
+ }" data-collapsed="@function breakpoint($size) { ... }"><code>@function breakpoint($size) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Función para obtener el valor del breakpoint correspondiente.</p><p>Esta función toma un nombre de tamaño (por ejemplo, &#39;small&#39;, &#39;medium&#39;, &#39;large&#39;) y devuelve su valor en píxeles.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc"><p>El nombre del tamaño de la pantalla (por ejemplo, &#39;small&#39;, &#39;medium&#39;, etc.).</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code> &mdash;<p>El valor del breakpoint correspondiente.</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#media queries-variable-breakpoints"><code>breakpoints</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-media"><code>media</code></a></li></ul></section></section><section class="main__sub-section" id="undefined-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="undefined-css-.card-container"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.card-container">.card-container</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.card-container {
+  @include flex();
+    flex-wrap: wrap;
+    gap: 1.25rem;
+
+    /// Estilos para pantallas pequeñas.
+    /// 
+    /// En pantallas pequeñas, el contenedor de las tarjetas cambia a una
+    /// disposición en columna y se reduce el espacio entre los elementos.
+    @include media(small) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /// Estilos para pantallas medianas.
+    /// 
+    /// En pantallas medianas, el contenedor se organiza horizontalmente
+    /// y se ajusta el espacio entre los elementos.
+    @include media(medium) {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    /// Estilos para pantallas grandes.
+    /// 
+    /// En pantallas grandes, el contenedor mantiene una disposición horizontal
+    /// con un espacio más amplio entre las tarjetas.
+    @include media(large) {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}</code>" data-collapsed=".card-container { ... }"><code>.card-container { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Contenedor de las tarjetas.</p><p>Este contenedor usa Flexbox para distribuir las tarjetas de manera flexible. Las tarjetas se ajustan a diferentes tamaños de pantalla con un diseño responsive.</p></div></section><section class="main__item container item" id="undefined-css-.card-item"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.card-item">.card-item</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.card-item {
+  position: relative;
+    width: 30rem;
+    height: 38rem;
+    overflow: hidden;
+    background-color: color(primary);
+    border-radius: 0.9rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /// Estilos para pantallas pequeñas.
+    /// 
+    /// En pantallas pequeñas, las tarjetas ocupan el 100% del ancho disponible
+    /// y tienen altura automática.
+    @include media(small) {
+        width: 100%;
+        height: auto;
+    }
+
+    /// Estilos para pantallas medianas.
+    /// 
+    /// En pantallas medianas, las tarjetas tienen un tamaño más pequeño.
+    @include media(medium) {
+        width: 25rem;
+        height: 30rem;
+    }
+
+    /// Estilos para pantallas grandes.
+    /// 
+    /// En pantallas grandes, las tarjetas mantienen su tamaño original.
+    @include media(large) {
+        width: 30rem;
+        height: 38rem;
+    }
+
+    /// Estilo para la imagen dentro de la tarjeta.
+    /// 
+    /// La imagen ocupa todo el espacio disponible, cubriendo el área de la tarjeta
+    /// con un efecto de transición de rotación.
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease-in-out;
+        backface-visibility: hidden;
+    }
+
+    /// Estilo para el texto de la tarjeta.
+    /// 
+    /// El texto está posicionado de manera absoluta en el centro de la tarjeta,
+    /// pero inicialmente está oculto y solo aparece cuando se hace hover sobre la tarjeta.
+    .card-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+        h3,
+        p {
+            font-size: 2rem;
+            color: color(quaternary);
+            margin: 0;
+            opacity: 1;
+        }
+    }
+
+    /// Comportamiento al pasar el cursor (hover).
+    /// 
+    /// Cuando el usuario hace hover sobre la tarjeta, la imagen rota y el texto
+    /// aparece con una transición suave.
+    &amp;:hover {
+        img {
+            transform: rotateY(180deg);
+        }
+
+        .card-text {
+            visibility: visible;
+            opacity: 1;
+            z-index: 2;
+        }
+
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+}</code>" data-collapsed=".card-item { ... }"><code>.card-item { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilo para cada tarjeta dentro del contenedor.</p><p>Define las dimensiones y el comportamiento visual de las tarjetas. Las tarjetas tienen un comportamiento de rotación y transición cuando se hace hover sobre ellas.</p></div></section><section class="main__item container item" id="undefined-css-img"><h3 class="item__heading"><a class="item__name" href="#undefined-css-img">img</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>img {
+  width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease-in-out;
+        backface-visibility: hidden;
+}</code>" data-collapsed="img { ... }"><code>img { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilo para la imagen dentro de la tarjeta.</p><pre><code>La imagen ocupa todo el espacio disponible, cubriendo el área de la tarjeta
+con un efecto de transición de rotación.</code></pre></div></section><section class="main__item container item" id="undefined-css-.card-text"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.card-text">.card-text</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.card-text {
+  position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+        h3,
+        p {
+            font-size: 2rem;
+            color: color(quaternary);
+            margin: 0;
+            opacity: 1;
+        }
+}</code>" data-collapsed=".card-text { ... }"><code>.card-text { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilo para el texto de la tarjeta.</p><pre><code>El texto está posicionado de manera absoluta en el centro de la tarjeta,
+pero inicialmente está oculto y solo aparece cuando se hace hover sobre la tarjeta.</code></pre></div></section><section class="main__item container item" id="undefined-css-&amp;:hover"><h3 class="item__heading"><a class="item__name" href="#undefined-css-&amp;:hover">&amp;:hover</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>&amp;:hover {
+  img {
+            transform: rotateY(180deg);
+        }
+
+        .card-text {
+            visibility: visible;
+            opacity: 1;
+            z-index: 2;
+        }
+
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}</code>" data-collapsed="&amp;:hover { ... }"><code>&amp;:hover { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Comportamiento al pasar el cursor (hover).</p><pre><code>Cuando el usuario hace hover sobre la tarjeta, la imagen rota y el texto
+aparece con una transición suave.</code></pre></div></section><section class="main__item container item" id="undefined-css-.content"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.content">.content</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.content {
+  grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
+    margin-left: 5rem; 
+    margin-top: 5rem; 
+    gap: 1rem; 
+    position: absolute;
+    z-index: 1001; 
+
+    /// Estilos para pantallas pequeñas.
+    /// 
+    /// En pantallas pequeñas, el contenedor ocupa toda la columna del grid
+    /// y se reposiciona dentro del diseño.
+    @include media(small) {
+        grid-column: 1 / -1; 
+        grid-row: 2 / 3;      
+        position: relative;   
+    }
+
+    /// Estilo para el título dentro del contenedor.
+    /// 
+    /// El título tiene un tamaño grande y en negrita.
+    .title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: color(primary);
+    }
+
+    /// Estilo para la descripción dentro del contenedor.
+    /// 
+    /// La descripción tiene un tamaño de texto moderado.
+    .description {
+        font-size: 1.5rem;
+        color: color(primary); 
+    }
+
+    /// Estilo para el botón.
+    /// 
+    /// El botón tiene un tamaño grande, un color de fondo y efectos de transición.
+    .cta-button {
+        padding: 1rem 2rem; 
+        background-color: color(primary); 
+        border: none; 
+        color: white; 
+        font-size: 2rem;
+        cursor: pointer; 
+        transition: background-color 0.3s, transform 0.3s; 
+
+        /// Efecto al pasar el cursor sobre el botón (hover).
+        /// 
+        /// Cuando el usuario pasa el mouse sobre el botón, el color de fondo cambia ligeramente.
+        &amp;:hover {
+            background-color: color(primary);
+            transform: scale(1.05);
+        }
+    }
+}</code>" data-collapsed=".content { ... }"><code>.content { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el contenedor principal <code>.content</code>.</p><p>Este contenedor se posiciona dentro de un diseño basado en grid y utiliza Flexbox para organizar su contenido. El comportamiento cambia según el tamaño de la pantalla.</p></div></section><section class="main__item container item" id="undefined-css-.title"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.title">.title</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.title {
+  font-size: 3rem;
+        font-weight: bold;
+        color: color(primary);
+}</code>" data-collapsed=".title { ... }"><code>.title { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilo para el título dentro del contenedor.</p><pre><code>El título tiene un tamaño grande y en negrita.</code></pre></div></section><section class="main__item container item" id="undefined-css-.description"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.description">.description</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.description {
+  font-size: 1.5rem;
+        color: color(primary);
+}</code>" data-collapsed=".description { ... }"><code>.description { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilo para la descripción dentro del contenedor.</p><pre><code>La descripción tiene un tamaño de texto moderado.</code></pre></div></section><section class="main__item container item" id="undefined-css-.cta-button"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.cta-button">.cta-button</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.cta-button {
+  padding: 1rem 2rem; 
+        background-color: color(primary); 
+        border: none; 
+        color: white; 
+        font-size: 2rem;
+        cursor: pointer; 
+        transition: background-color 0.3s, transform 0.3s; 
+
+        /// Efecto al pasar el cursor sobre el botón (hover).
+        /// 
+        /// Cuando el usuario pasa el mouse sobre el botón, el color de fondo cambia ligeramente.
+        &amp;:hover {
+            background-color: color(primary);
+            transform: scale(1.05);
+        }
+}</code>" data-collapsed=".cta-button { ... }"><code>.cta-button { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilo para el botón.</p><pre><code>El botón tiene un tamaño grande, un color de fondo y efectos de transición.</code></pre></div></section><section class="main__item container item" id="undefined-css-&amp;:hover"><h3 class="item__heading"><a class="item__name" href="#undefined-css-&amp;:hover">&amp;:hover</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>&amp;:hover {
+  background-color: color(primary);
+            transform: scale(1.05);
+}</code>" data-collapsed="&amp;:hover { ... }"><code>&amp;:hover { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Efecto al pasar el cursor sobre el botón (hover).</p><pre><code>    Cuando el usuario pasa el mouse sobre el botón, el color de fondo cambia ligeramente.</code></pre></div></section><section class="main__item container item" id="undefined-css-.footer-wrapper"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.footer-wrapper">.footer-wrapper</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.footer-wrapper {
+  display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    /// Estilos para el contenedor del pie de página (`.footer-container`).
+    /// 
+    /// El contenedor está diseñado para distribuir las secciones del pie de página
+    /// de manera flexible y alinearlas con espacio entre ellas.
+    .footer-container {
+        display: flex; 
+        justify-content: space-between;
+        width: 100%; 
+        max-width: 1200px; 
+        margin-bottom: 2rem;
+        flex-wrap: wrap; 
+        flex-grow: 1; 
+
+        /// Estilos para cada sección dentro del pie de página (`.footer-section`).
+        /// 
+        /// Cada sección ocupa un espacio flexible y tiene un tamaño mínimo
+        /// para garantizar que no se colapsen.
+        .footer-section {
+            flex: 1; 
+            min-width: 200px; 
+            margin-right: 1.5rem; 
+            margin-bottom: 1.5rem;
+            color: #fff; 
+
+            /// Estilo para el título de cada sección (`h3`).
+            /// 
+            /// El título es de tamaño medio y en negrita.
+            h3 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+                font-weight: bold; 
+            }
+
+            /// Estilo para los párrafos dentro de cada sección (`p`).
+            /// 
+            /// El tamaño de fuente es más pequeño para los párrafos.
+            p {
+                font-size: 0.9rem;
+            }
+
+            /// Estilo para la lista de redes sociales (`ul.social-list`).
+            /// 
+            /// La lista es horizontal, sin puntos de lista, y contiene iconos de redes sociales.
+            ul.social-list {
+                list-style: none;
+                padding: 0; 
+                display: flex;
+
+                /// Estilos para cada ítem de la lista de redes sociales (`li`).
+                /// 
+                /// Se establece un margen derecho entre los iconos.
+                li {
+                    margin-right: 10px; 
+
+                    /// Estilos para los enlaces dentro de la lista (`a`).
+                    /// 
+                    /// Cada enlace es un bloque en línea para el control del espacio.
+                    a {
+                        display: inline-block;
+
+                        /// Estilos para las imágenes dentro de los enlaces (`img`).
+                        /// 
+                        /// Las imágenes tienen un tamaño fijo y un efecto de transición
+                        /// para aumentar ligeramente el tamaño cuando el usuario pasa el cursor.
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            transition: transform 0.3s, box-shadow 0.3s;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+                            /// Efecto hover: la imagen aumenta ligeramente de tamaño.
+                            &amp;:hover {
+                                transform: scale(1.1); 
+                                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /// Estilo para la sección inferior del pie de página (`.footer-bottom`).
+    /// 
+    /// Esta sección se centra y tiene un estilo más pequeño para la fuente.
+    .footer-bottom {
+        text-align: center; 
+        font-size: 0.85rem;
+        color: #aaa;
+        padding-top: 1rem; 
+        border-top: 1px solid #444;
+    }
+
+    /// Estilos para pantallas pequeñas.
+    /// 
+    /// Se añaden cambios de diseño si es necesario para pantallas pequeñas.
+    @include media(small) {
+        // Agregar estilos para pantallas pequeñas si es necesario.
+    }
+
+    /// Estilos para pantallas medianas.
+    /// 
+    /// En pantallas medianas, el pie de página cambia la disposición de las secciones
+    /// y ajusta el tamaño de la fuente en la parte inferior.
+    @include media(medium) {
+        .footer-container {
+            flex-direction: column; 
+            align-items: center; 
+
+            .footer-section {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .footer-bottom {
+            font-size: 0.9rem; 
+        }
+    }
+
+    /// Estilos para pantallas grandes.
+    /// 
+    /// En pantallas grandes, el pie de página vuelve a la disposición en fila.
+    /// Además, se ajusta el tamaño de la fuente en la parte inferior.
+    @include media(large) {
+        .footer-container {
+            flex-direction: row; 
+            justify-content: space-between; 
+
+            .footer-section {
+                margin-right: 1.5rem;
+                margin-bottom: 1.5rem; 
+            }
+        }
+
+        .footer-bottom {
+            font-size: 1rem;
+        }
+    }
+}</code>" data-collapsed=".footer-wrapper { ... }"><code>.footer-wrapper { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el contenedor principal del pie de página (<code>.footer-wrapper</code>).</p><p>Este contenedor utiliza <strong>Flexbox</strong> para organizar su contenido en columna, garantizando que el pie de página siempre tenga al menos el 100% de la altura de la ventana.</p></div></section><section class="main__item container item" id="undefined-css-.footer-container"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.footer-container">.footer-container</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.footer-container {
+  display: flex; 
+        justify-content: space-between;
+        width: 100%; 
+        max-width: 1200px; 
+        margin-bottom: 2rem;
+        flex-wrap: wrap; 
+        flex-grow: 1; 
+
+        /// Estilos para cada sección dentro del pie de página (`.footer-section`).
+        /// 
+        /// Cada sección ocupa un espacio flexible y tiene un tamaño mínimo
+        /// para garantizar que no se colapsen.
+        .footer-section {
+            flex: 1; 
+            min-width: 200px; 
+            margin-right: 1.5rem; 
+            margin-bottom: 1.5rem;
+            color: #fff; 
+
+            /// Estilo para el título de cada sección (`h3`).
+            /// 
+            /// El título es de tamaño medio y en negrita.
+            h3 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+                font-weight: bold; 
+            }
+
+            /// Estilo para los párrafos dentro de cada sección (`p`).
+            /// 
+            /// El tamaño de fuente es más pequeño para los párrafos.
+            p {
+                font-size: 0.9rem;
+            }
+
+            /// Estilo para la lista de redes sociales (`ul.social-list`).
+            /// 
+            /// La lista es horizontal, sin puntos de lista, y contiene iconos de redes sociales.
+            ul.social-list {
+                list-style: none;
+                padding: 0; 
+                display: flex;
+
+                /// Estilos para cada ítem de la lista de redes sociales (`li`).
+                /// 
+                /// Se establece un margen derecho entre los iconos.
+                li {
+                    margin-right: 10px; 
+
+                    /// Estilos para los enlaces dentro de la lista (`a`).
+                    /// 
+                    /// Cada enlace es un bloque en línea para el control del espacio.
+                    a {
+                        display: inline-block;
+
+                        /// Estilos para las imágenes dentro de los enlaces (`img`).
+                        /// 
+                        /// Las imágenes tienen un tamaño fijo y un efecto de transición
+                        /// para aumentar ligeramente el tamaño cuando el usuario pasa el cursor.
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            transition: transform 0.3s, box-shadow 0.3s;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+                            /// Efecto hover: la imagen aumenta ligeramente de tamaño.
+                            &amp;:hover {
+                                transform: scale(1.1); 
+                                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+}</code>" data-collapsed=".footer-container { ... }"><code>.footer-container { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el contenedor del pie de página (<code>.footer-container</code>).</p><pre><code>El contenedor está diseñado para distribuir las secciones del pie de página
+de manera flexible y alinearlas con espacio entre ellas.</code></pre></div></section><section class="main__item container item" id="undefined-css-.footer-section"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.footer-section">.footer-section</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.footer-section {
+  flex: 1; 
+            min-width: 200px; 
+            margin-right: 1.5rem; 
+            margin-bottom: 1.5rem;
+            color: #fff; 
+
+            /// Estilo para el título de cada sección (`h3`).
+            /// 
+            /// El título es de tamaño medio y en negrita.
+            h3 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+                font-weight: bold; 
+            }
+
+            /// Estilo para los párrafos dentro de cada sección (`p`).
+            /// 
+            /// El tamaño de fuente es más pequeño para los párrafos.
+            p {
+                font-size: 0.9rem;
+            }
+
+            /// Estilo para la lista de redes sociales (`ul.social-list`).
+            /// 
+            /// La lista es horizontal, sin puntos de lista, y contiene iconos de redes sociales.
+            ul.social-list {
+                list-style: none;
+                padding: 0; 
+                display: flex;
+
+                /// Estilos para cada ítem de la lista de redes sociales (`li`).
+                /// 
+                /// Se establece un margen derecho entre los iconos.
+                li {
+                    margin-right: 10px; 
+
+                    /// Estilos para los enlaces dentro de la lista (`a`).
+                    /// 
+                    /// Cada enlace es un bloque en línea para el control del espacio.
+                    a {
+                        display: inline-block;
+
+                        /// Estilos para las imágenes dentro de los enlaces (`img`).
+                        /// 
+                        /// Las imágenes tienen un tamaño fijo y un efecto de transición
+                        /// para aumentar ligeramente el tamaño cuando el usuario pasa el cursor.
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            transition: transform 0.3s, box-shadow 0.3s;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+                            /// Efecto hover: la imagen aumenta ligeramente de tamaño.
+                            &amp;:hover {
+                                transform: scale(1.1); 
+                                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                            }
+                        }
+                    }
+                }
+            }
+}</code>" data-collapsed=".footer-section { ... }"><code>.footer-section { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para cada sección dentro del pie de página (<code>.footer-section</code>).</p><pre><code>    Cada sección ocupa un espacio flexible y tiene un tamaño mínimo
+    para garantizar que no se colapsen.</code></pre></div></section><section class="main__item container item" id="undefined-css-h3"><h3 class="item__heading"><a class="item__name" href="#undefined-css-h3">h3</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h3 {
+  font-size: 1.2rem;
+                margin-bottom: 1rem;
+                font-weight: bold;
+}</code>" data-collapsed="h3 { ... }"><code>h3 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilo para el título de cada sección (<code>h3</code>).</p><pre><code>        El título es de tamaño medio y en negrita.</code></pre></div></section><section class="main__item container item" id="undefined-css-p"><h3 class="item__heading"><a class="item__name" href="#undefined-css-p">p</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>p {
+  font-size: 0.9rem;
+}</code>" data-collapsed="p { ... }"><code>p { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilo para los párrafos dentro de cada sección (<code>p</code>).</p><pre><code>        El tamaño de fuente es más pequeño para los párrafos.</code></pre></div></section><section class="main__item container item" id="undefined-css-ul.social-list"><h3 class="item__heading"><a class="item__name" href="#undefined-css-ul.social-list">ul.social-list</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>ul.social-list {
+  list-style: none;
+                padding: 0; 
+                display: flex;
+
+                /// Estilos para cada ítem de la lista de redes sociales (`li`).
+                /// 
+                /// Se establece un margen derecho entre los iconos.
+                li {
+                    margin-right: 10px; 
+
+                    /// Estilos para los enlaces dentro de la lista (`a`).
+                    /// 
+                    /// Cada enlace es un bloque en línea para el control del espacio.
+                    a {
+                        display: inline-block;
+
+                        /// Estilos para las imágenes dentro de los enlaces (`img`).
+                        /// 
+                        /// Las imágenes tienen un tamaño fijo y un efecto de transición
+                        /// para aumentar ligeramente el tamaño cuando el usuario pasa el cursor.
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            transition: transform 0.3s, box-shadow 0.3s;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+                            /// Efecto hover: la imagen aumenta ligeramente de tamaño.
+                            &amp;:hover {
+                                transform: scale(1.1); 
+                                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                            }
+                        }
+                    }
+                }
+}</code>" data-collapsed="ul.social-list { ... }"><code>ul.social-list { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilo para la lista de redes sociales (<code>ul.social-list</code>).</p><pre><code>        La lista es horizontal, sin puntos de lista, y contiene iconos de redes sociales.</code></pre></div></section><section class="main__item container item" id="undefined-css-li"><h3 class="item__heading"><a class="item__name" href="#undefined-css-li">li</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>li {
+  margin-right: 10px; 
+
+                    /// Estilos para los enlaces dentro de la lista (`a`).
+                    /// 
+                    /// Cada enlace es un bloque en línea para el control del espacio.
+                    a {
+                        display: inline-block;
+
+                        /// Estilos para las imágenes dentro de los enlaces (`img`).
+                        /// 
+                        /// Las imágenes tienen un tamaño fijo y un efecto de transición
+                        /// para aumentar ligeramente el tamaño cuando el usuario pasa el cursor.
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            transition: transform 0.3s, box-shadow 0.3s;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+                            /// Efecto hover: la imagen aumenta ligeramente de tamaño.
+                            &amp;:hover {
+                                transform: scale(1.1); 
+                                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                            }
+                        }
+                    }
+}</code>" data-collapsed="li { ... }"><code>li { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para cada ítem de la lista de redes sociales (<code>li</code>).</p><pre><code>            Se establece un margen derecho entre los iconos.</code></pre></div></section><section class="main__item container item" id="undefined-css-a"><h3 class="item__heading"><a class="item__name" href="#undefined-css-a">a</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>a {
+  display: inline-block;
+
+                        /// Estilos para las imágenes dentro de los enlaces (`img`).
+                        /// 
+                        /// Las imágenes tienen un tamaño fijo y un efecto de transición
+                        /// para aumentar ligeramente el tamaño cuando el usuario pasa el cursor.
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            transition: transform 0.3s, box-shadow 0.3s;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+                            /// Efecto hover: la imagen aumenta ligeramente de tamaño.
+                            &amp;:hover {
+                                transform: scale(1.1); 
+                                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                            }
+                        }
+}</code>" data-collapsed="a { ... }"><code>a { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para los enlaces dentro de la lista (<code>a</code>).</p><pre><code>                Cada enlace es un bloque en línea para el control del espacio.</code></pre></div></section><section class="main__item container item" id="undefined-css-img"><h3 class="item__heading"><a class="item__name" href="#undefined-css-img">img</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>img {
+  width: 24px;
+                            height: 24px;
+                            transition: transform 0.3s, box-shadow 0.3s;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+                            /// Efecto hover: la imagen aumenta ligeramente de tamaño.
+                            &amp;:hover {
+                                transform: scale(1.1); 
+                                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                            }
+}</code>" data-collapsed="img { ... }"><code>img { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para las imágenes dentro de los enlaces (<code>img</code>).</p><pre><code>                    Las imágenes tienen un tamaño fijo y un efecto de transición
+                    para aumentar ligeramente el tamaño cuando el usuario pasa el cursor.</code></pre></div></section><section class="main__item container item" id="undefined-css-&amp;:hover"><h3 class="item__heading"><a class="item__name" href="#undefined-css-&amp;:hover">&amp;:hover</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>&amp;:hover {
+  transform: scale(1.1); 
+                                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}</code>" data-collapsed="&amp;:hover { ... }"><code>&amp;:hover { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Efecto hover: la imagen aumenta ligeramente de tamaño.</p></div></section><section class="main__item container item" id="undefined-css-.footer-bottom"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.footer-bottom">.footer-bottom</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.footer-bottom {
+  text-align: center; 
+        font-size: 0.85rem;
+        color: #aaa;
+        padding-top: 1rem; 
+        border-top: 1px solid #444;
+}</code>" data-collapsed=".footer-bottom { ... }"><code>.footer-bottom { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilo para la sección inferior del pie de página (<code>.footer-bottom</code>).</p><pre><code>Esta sección se centra y tiene un estilo más pequeño para la fuente.</code></pre></div></section><section class="main__item container item" id="undefined-css-.heading"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.heading">.heading</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.heading {
+  grid-column: 3/8;
+    grid-row: 1/2;
+    @include flex(); 
+    place-self: center;
+
+    /// Estilos para el texto dentro del encabezado (`.heading-text`).
+    /// 
+    /// El margen y tamaño de fuente se ajustan según el tamaño de pantalla.
+    &amp;-text {
+        margin: 2rem; // Aplica un margen de 2rem alrededor del texto.
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        /// Efectos al pasar el cursor (hover).
+        /// 
+        /// Al pasar el cursor sobre el texto, el color cambia a &quot;darkred&quot; y
+        /// el texto se amplía ligeramente con un efecto de transformación.
+        &amp;:hover {
+            color: darkred;
+            transform: scale(1.05);
+        }
+
+        /// Estilos para pantallas pequeñas.
+        /// 
+        /// En pantallas pequeñas, el margen se reduce a 1rem y el tamaño de
+        /// fuente se ajusta a 3rem.
+        @include media(small) {
+            margin: 1rem;
+            font-size: 3rem; 
+        }
+    }
+
+    /// Estilos para pantallas medianas.
+    /// 
+    /// En pantallas medianas, el encabezado se ajusta a las columnas 2 a 9
+    /// y filas 1 a 2. El texto también tiene un ajuste en el margen y tamaño
+    /// de fuente.
+    @include media(medium) {
+        grid-column: 2 / 9; 
+        grid-row: 1 / 2;
+
+        &amp;-text {
+            margin: 1.5rem; 
+            font-size: 2.5rem; 
+        }
+    }
+
+    /// Estilos para pantallas grandes.
+    /// 
+    /// En pantallas grandes, el encabezado se mantiene en las columnas 3 a 8
+    /// y filas 1 a 2. El texto también tiene un ajuste en el margen y tamaño
+    /// de fuente.
+    @include media(large) {
+        grid-column: 3 / 8; 
+        grid-row: 1 / 2;
+
+        &amp;-text {
+            margin: 2.5rem; 
+            font-size: 3.5rem; 
+        }
+    }
+}</code>" data-collapsed=".heading { ... }"><code>.heading { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el encabezado principal (<code>.heading</code>).</p><p>El encabezado se coloca en un grid específico y se centra utilizando Flexbox. Se ajusta según el tamaño de pantalla.</p></div></section><section class="main__item container item" id="undefined-css-&amp;-text"><h3 class="item__heading"><a class="item__name" href="#undefined-css-&amp;-text">&amp;-text</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>&amp;-text {
+  margin: 2rem; // Aplica un margen de 2rem alrededor del texto.
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        /// Efectos al pasar el cursor (hover).
+        /// 
+        /// Al pasar el cursor sobre el texto, el color cambia a &quot;darkred&quot; y
+        /// el texto se amplía ligeramente con un efecto de transformación.
+        &amp;:hover {
+            color: darkred;
+            transform: scale(1.05);
+        }
+
+        /// Estilos para pantallas pequeñas.
+        /// 
+        /// En pantallas pequeñas, el margen se reduce a 1rem y el tamaño de
+        /// fuente se ajusta a 3rem.
+        @include media(small) {
+            margin: 1rem;
+            font-size: 3rem; 
+        }
+}</code>" data-collapsed="&amp;-text { ... }"><code>&amp;-text { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el texto dentro del encabezado (<code>.heading-text</code>).</p><pre><code>El margen y tamaño de fuente se ajustan según el tamaño de pantalla.</code></pre></div></section><section class="main__item container item" id="undefined-css-&amp;:hover"><h3 class="item__heading"><a class="item__name" href="#undefined-css-&amp;:hover">&amp;:hover</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>&amp;:hover {
+  color: darkred;
+            transform: scale(1.05);
+}</code>" data-collapsed="&amp;:hover { ... }"><code>&amp;:hover { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Efectos al pasar el cursor (hover).</p><pre><code>    Al pasar el cursor sobre el texto, el color cambia a &quot;darkred&quot; y
+    el texto se amplía ligeramente con un efecto de transformación.</code></pre></div></section><section class="main__item container item" id="undefined-css-.image"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.image">.image</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.image {
+  grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    width: 100%; 
+    height: 100%;
+
+    /// Estilos para la imagen dentro del contenedor (`img`).
+    /// 
+    /// La imagen se ajusta al 100% del contenedor y mantiene una proporción
+    /// de cobertura, asegurando que ocupe todo el espacio del contenedor
+    /// sin perder la proporción de la imagen.
+    img {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover; 
+    }
+}</code>" data-collapsed=".image { ... }"><code>.image { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el contenedor de la imagen (<code>.image</code>).</p><p>El contenedor ocupa todo el ancho y la altura del grid en la fila 1. Se asegura de que la imagen ocupe todo el espacio disponible.</p></div></section><section class="main__item container item" id="undefined-css-img"><h3 class="item__heading"><a class="item__name" href="#undefined-css-img">img</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>img {
+  width: 100%; 
+        height: 100%;
+        object-fit: cover;
+}</code>" data-collapsed="img { ... }"><code>img { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para la imagen dentro del contenedor (<code>img</code>).</p><pre><code>La imagen se ajusta al 100% del contenedor y mantiene una proporción
+de cobertura, asegurando que ocupe todo el espacio del contenedor
+sin perder la proporción de la imagen.</code></pre></div></section><section class="main__item container item" id="undefined-css-.info-contenedor"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.info-contenedor">.info-contenedor</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.info-contenedor {
+  display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 15rem; 
+    padding: 2rem;
+
+    /// Estilos para el contenedor de cada tarjeta de información (`.info-contenedor-tarjeta`).
+    /// 
+    /// Cada tarjeta está centrada y tiene un ancho máximo de 18rem.
+    &amp;-tarjeta {
+        text-align: center;
+        max-width: 18rem; 
+
+        /// Estilos para la imagen dentro de cada tarjeta.
+        /// 
+        /// La imagen tiene un tamaño fijo y un margen inferior.
+        img {
+            width: 4rem;
+            height: auto; 
+            margin-bottom: 0.8rem; 
+        }
+
+        /// Estilos para el título dentro de cada tarjeta (`h3`).
+        /// 
+        /// El título tiene un tamaño de fuente grande, en negrita y en mayúsculas.
+        h3 {
+            font-size: 2.2rem; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            color: #b9975b;
+        }
+
+        /// Estilos para el párrafo dentro de cada tarjeta (`p`).
+        /// 
+        /// El párrafo tiene un tamaño de fuente moderado y un buen interlineado.
+        p {
+            color: black; 
+            font-size: 1.5rem;
+            line-height: 1.6; 
+        }
+    }
+
+    /// Estilos específicos para pantallas pequeñas.
+    /// 
+    /// El contenedor cambia la dirección de los elementos a columna,
+    /// y el espaciado y tamaños de los elementos también se ajustan.
+    @include media(small) {
+        flex-direction: column; 
+        gap: 2rem; 
+        padding: 1rem; 
+
+        &amp;-tarjeta {
+            max-width: 100%; 
+            margin: 0 auto; 
+
+            img {
+                width: 3rem; 
+            }
+
+            h3 {
+                font-size: 1.8rem; 
+            }
+
+            p {
+                font-size: 1.3rem; 
+            }
+        }
+    }
+
+    /// Estilos específicos para pantallas medianas.
+    /// 
+    /// El espaciado y el tamaño de las tarjetas se ajustan para pantallas de tamaño
+    /// mediano, mejorando la disposición visual.
+    @include media(medium) {
+        gap: 10rem; 
+        padding: 1.5rem;
+
+        &amp;-tarjeta {
+            max-width: 80%; 
+
+            img {
+                width: 3.5rem; 
+            }
+
+            h3 {
+                font-size: 2rem; 
+            }
+
+            p {
+                font-size: 1.4rem; 
+            }
+        }
+    }
+
+    /// Estilos específicos para pantallas grandes.
+    /// 
+    /// El espaciado y tamaño de las tarjetas se ajustan para pantallas grandes,
+    /// asegurando que el diseño siga siendo visualmente atractivo.
+    @include media(large) {
+        gap: 5rem;
+        padding: 3rem; 
+
+        &amp;-tarjeta {
+            max-width: 60%; 
+
+            img {
+                width: 4.5rem; 
+            }
+
+            h3 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.6rem; 
+            }
+        }
+    }
+}</code>" data-collapsed=".info-contenedor { ... }"><code>.info-contenedor { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el componente del contenedor de información (<code>.info-contenedor</code>).</p><p>Este contenedor utiliza Flexbox para organizar sus elementos de manera flexible. El contenido está centrado y se ajusta según el tamaño de pantalla.</p></div></section><section class="main__item container item" id="undefined-css-&amp;-tarjeta"><h3 class="item__heading"><a class="item__name" href="#undefined-css-&amp;-tarjeta">&amp;-tarjeta</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>&amp;-tarjeta {
+  text-align: center;
+        max-width: 18rem; 
+
+        /// Estilos para la imagen dentro de cada tarjeta.
+        /// 
+        /// La imagen tiene un tamaño fijo y un margen inferior.
+        img {
+            width: 4rem;
+            height: auto; 
+            margin-bottom: 0.8rem; 
+        }
+
+        /// Estilos para el título dentro de cada tarjeta (`h3`).
+        /// 
+        /// El título tiene un tamaño de fuente grande, en negrita y en mayúsculas.
+        h3 {
+            font-size: 2.2rem; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            color: #b9975b;
+        }
+
+        /// Estilos para el párrafo dentro de cada tarjeta (`p`).
+        /// 
+        /// El párrafo tiene un tamaño de fuente moderado y un buen interlineado.
+        p {
+            color: black; 
+            font-size: 1.5rem;
+            line-height: 1.6; 
+        }
+}</code>" data-collapsed="&amp;-tarjeta { ... }"><code>&amp;-tarjeta { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el contenedor de cada tarjeta de información (<code>.info-contenedor-tarjeta</code>).</p><pre><code>Cada tarjeta está centrada y tiene un ancho máximo de 18rem.</code></pre></div></section><section class="main__item container item" id="undefined-css-img"><h3 class="item__heading"><a class="item__name" href="#undefined-css-img">img</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>img {
+  width: 4rem;
+            height: auto; 
+            margin-bottom: 0.8rem;
+}</code>" data-collapsed="img { ... }"><code>img { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para la imagen dentro de cada tarjeta.</p><pre><code>    La imagen tiene un tamaño fijo y un margen inferior.</code></pre></div></section><section class="main__item container item" id="undefined-css-h3"><h3 class="item__heading"><a class="item__name" href="#undefined-css-h3">h3</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h3 {
+  font-size: 2.2rem; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            color: #b9975b;
+}</code>" data-collapsed="h3 { ... }"><code>h3 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el título dentro de cada tarjeta (<code>h3</code>).</p><pre><code>    El título tiene un tamaño de fuente grande, en negrita y en mayúsculas.</code></pre></div></section><section class="main__item container item" id="undefined-css-p"><h3 class="item__heading"><a class="item__name" href="#undefined-css-p">p</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>p {
+  color: black; 
+            font-size: 1.5rem;
+            line-height: 1.6;
+}</code>" data-collapsed="p { ... }"><code>p { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el párrafo dentro de cada tarjeta (<code>p</code>).</p><pre><code>    El párrafo tiene un tamaño de fuente moderado y un buen interlineado.</code></pre></div></section><section class="main__item container item" id="undefined-css-.logo"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.logo">.logo</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.logo {
+  grid-column: 2 / 3; 
+    grid-row: 1 / 2; 
+    width: 12rem; 
+    height: 12rem; 
+    place-self: center; 
+    padding: 1rem; 
+
+    /// Estilos para pantallas pequeñas (`small`).
+    /// 
+    /// Cambia el diseño del logo para que ocupe la primera columna de la cuadrícula
+    /// y se coloque en el centro.
+    @include media(small) {
+        grid-column: 1 / 2; 
+        display: flex;
+        flex-wrap: wrap; 
+        align-content: center;
+        justify-content: center; 
+    }
+
+    /// Estilos para la imagen del logo (`.logo-img`).
+    /// 
+    /// La imagen ocupa el 100% del ancho y la altura del contenedor del logo,
+    /// y mantiene la proporción correcta mediante `object-fit: cover`.
+    &amp;-img {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover; 
+    }
+
+    /// Estilos para pantallas pequeñas (`small`).
+    /// 
+    /// En pantallas pequeñas, el tamaño de la imagen del logo se reduce a 4rem de ancho y altura.
+    @include media(small) {
+        &amp;-img {
+            width: 4rem; 
+            height: 4rem; 
+        }
+    }
+}</code>" data-collapsed=".logo { ... }"><code>.logo { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el contenedor del logo (<code>.logo</code>).</p><p>El logo se posiciona en la cuadrícula y se adapta al tamaño del contenedor. Además, tiene un tamaño fijo de 12rem y se ajusta en función de los tamaños de pantalla.</p></div></section><section class="main__item container item" id="undefined-css-&amp;-img"><h3 class="item__heading"><a class="item__name" href="#undefined-css-&amp;-img">&amp;-img</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>&amp;-img {
+  width: 100%; 
+        height: 100%;
+        object-fit: cover;
+}</code>" data-collapsed="&amp;-img { ... }"><code>&amp;-img { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para la imagen del logo (<code>.logo-img</code>).</p><pre><code>La imagen ocupa el 100% del ancho y la altura del contenedor del logo,
+y mantiene la proporción correcta mediante `object-fit: cover`.</code></pre></div></section><section class="main__item container item" id="undefined-css-.nav"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.nav">.nav</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.nav {
+  grid-column: 2 / 9; 
+    grid-row: 2 / 3; 
+
+    z-index: 101;
+    padding-bottom: 2rem;
+
+    /// Estilos para la lista de navegación (`.nav-list`).
+    /// 
+    /// La lista se muestra sin estilo de lista predeterminado y se organiza con Flexbox,
+    /// permitiendo una distribución horizontal de los elementos.
+    &amp;-list {
+        list-style-type: none;
+        @include flex(); 
+        gap: 2rem; 
+        padding: 0; 
+        margin: 0;
+
+        /// Estilos para los elementos de la lista de navegación (`.nav-item`).
+        .nav-item {
+            /// Estilos para el primer enlace de navegación (`a.first-nav-link`).
+            /// 
+            /// Se aplican estilos específicos al enlace de la lista, como el color, el peso de la fuente,
+            /// y la transformación de texto. Además, se incluye un efecto hover para cambiar el color.
+            a.first-nav-link {
+                text-decoration: none; 
+                color: color(terciary); 
+                font-weight: bold; 
+                text-transform: uppercase;
+                letter-spacing: 0.2rem; 
+                transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+                /// Efecto hover sobre el enlace.
+                /// 
+                /// Al pasar el cursor sobre el enlace, cambia su color a un tono de rojo más oscuro.
+                &amp;:hover {
+                    color: darkred; 
+                    transform: scale(1.1); 
+                } 
+            }
+        }
+    }
+
+    /// Estilos para pantallas pequeñas (`small`).
+    /// 
+    /// En pantallas pequeñas, el contenedor de la navegación ocupa toda la anchura de la cuadrícula
+    /// y se ajustan los estilos para mejorar la usabilidad en dispositivos pequeños.
+    @include media(small) {
+        grid-column: 1 / -1; 
+        padding-bottom: 1rem; 
+        justify-self: start; 
+        margin-right: 10rem; 
+    
+        &amp;-list {
+            gap: 0.1rem;  
+            max-width: 100%; 
+            flex-wrap: wrap; 
+        }
+    }
+
+    /// Estilos para pantallas medianas (`medium`).
+    /// 
+    /// En pantallas medianas, se ajustan los márgenes y el espaciado entre los elementos.
+    @include media(medium) {
+        grid-column: 1 / -1;
+        padding-bottom: 1.5rem; 
+        margin-left: 2rem; 
+
+        &amp;-list {
+            gap: 1.5rem;
+        }
+    }
+
+    /// Estilos para pantallas grandes (`large`).
+    /// 
+    /// En pantallas grandes, el contenedor de la navegación vuelve a ocupar un rango específico de columnas
+    /// y se ajusta el espaciado y el margen para una mejor disposición.
+    @include media(large) {
+        grid-column: 2 / 10;
+        padding-bottom: 2.5rem; 
+        margin-left: 4rem; 
+
+        &amp;-list {
+            gap: 2.5rem; 
+        }
+    }
+}</code>" data-collapsed=".nav { ... }"><code>.nav { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el componente de navegación (<code>.nav</code>).</p><p>El contenedor de la navegación se posiciona en la cuadrícula y ocupa un rango de columnas y filas específicos. Además, se aplica un <code>z-index</code> para asegurar que se apile encima de otros elementos.</p></div></section><section class="main__item container item" id="undefined-css-&amp;-list"><h3 class="item__heading"><a class="item__name" href="#undefined-css-&amp;-list">&amp;-list</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>&amp;-list {
+  list-style-type: none;
+        @include flex(); 
+        gap: 2rem; 
+        padding: 0; 
+        margin: 0;
+
+        /// Estilos para los elementos de la lista de navegación (`.nav-item`).
+        .nav-item {
+            /// Estilos para el primer enlace de navegación (`a.first-nav-link`).
+            /// 
+            /// Se aplican estilos específicos al enlace de la lista, como el color, el peso de la fuente,
+            /// y la transformación de texto. Además, se incluye un efecto hover para cambiar el color.
+            a.first-nav-link {
+                text-decoration: none; 
+                color: color(terciary); 
+                font-weight: bold; 
+                text-transform: uppercase;
+                letter-spacing: 0.2rem; 
+                transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+                /// Efecto hover sobre el enlace.
+                /// 
+                /// Al pasar el cursor sobre el enlace, cambia su color a un tono de rojo más oscuro.
+                &amp;:hover {
+                    color: darkred; 
+                    transform: scale(1.1); 
+                } 
+            }
+        }
+}</code>" data-collapsed="&amp;-list { ... }"><code>&amp;-list { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para la lista de navegación (<code>.nav-list</code>).</p><pre><code>La lista se muestra sin estilo de lista predeterminado y se organiza con Flexbox,
+permitiendo una distribución horizontal de los elementos.</code></pre></div></section><section class="main__item container item" id="undefined-css-.nav-item"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.nav-item">.nav-item</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.nav-item {
+  /// Estilos para el primer enlace de navegación (`a.first-nav-link`).
+            /// 
+            /// Se aplican estilos específicos al enlace de la lista, como el color, el peso de la fuente,
+            /// y la transformación de texto. Además, se incluye un efecto hover para cambiar el color.
+            a.first-nav-link {
+                text-decoration: none; 
+                color: color(terciary); 
+                font-weight: bold; 
+                text-transform: uppercase;
+                letter-spacing: 0.2rem; 
+                transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+                /// Efecto hover sobre el enlace.
+                /// 
+                /// Al pasar el cursor sobre el enlace, cambia su color a un tono de rojo más oscuro.
+                &amp;:hover {
+                    color: darkred; 
+                    transform: scale(1.1); 
+                } 
+            }
+}</code>" data-collapsed=".nav-item { ... }"><code>.nav-item { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para los elementos de la lista de navegación (<code>.nav-item</code>).</p></div></section><section class="main__item container item" id="undefined-css-a.first-nav-link"><h3 class="item__heading"><a class="item__name" href="#undefined-css-a.first-nav-link">a.first-nav-link</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>a.first-nav-link {
+  text-decoration: none; 
+                color: color(terciary); 
+                font-weight: bold; 
+                text-transform: uppercase;
+                letter-spacing: 0.2rem; 
+                transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+                /// Efecto hover sobre el enlace.
+                /// 
+                /// Al pasar el cursor sobre el enlace, cambia su color a un tono de rojo más oscuro.
+                &amp;:hover {
+                    color: darkred; 
+                    transform: scale(1.1); 
+                }
+}</code>" data-collapsed="a.first-nav-link { ... }"><code>a.first-nav-link { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el primer enlace de navegación (<code>a.first-nav-link</code>).</p><pre><code>        Se aplican estilos específicos al enlace de la lista, como el color, el peso de la fuente,
+        y la transformación de texto. Además, se incluye un efecto hover para cambiar el color.</code></pre></div></section><section class="main__item container item" id="undefined-css-&amp;:hover"><h3 class="item__heading"><a class="item__name" href="#undefined-css-&amp;:hover">&amp;:hover</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>&amp;:hover {
+  color: darkred; 
+                    transform: scale(1.1);
+}</code>" data-collapsed="&amp;:hover { ... }"><code>&amp;:hover { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Efecto hover sobre el enlace.</p><pre><code>            Al pasar el cursor sobre el enlace, cambia su color a un tono de rojo más oscuro.</code></pre></div></section><section class="main__item container item" id="undefined-css-.villas-container"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.villas-container">.villas-container</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.villas-container {
+  display: flex; 
+    flex-wrap: wrap;
+}</code>" data-collapsed=".villas-container { ... }"><code>.villas-container { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el contenedor de las villas (<code>.villas-container</code>).</p><p>El contenedor de las villas utiliza Flexbox para organizar los elementos de manera flexible en filas. También permite que los elementos se ajusten y envuelvan dentro del contenedor.</p></div></section><section class="main__item container item" id="undefined-css-.villa-item"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.villa-item">.villa-item</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.villa-item {
+  flex: 1 1 calc(20% - 20px); 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    overflow: hidden;
+}</code>" data-collapsed=".villa-item { ... }"><code>.villa-item { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para cada elemento de la villa (<code>.villa-item</code>).</p><p>Cada villa es un elemento flexible que ocupa un porcentaje específico del ancho, y su contenido se organiza en columna, con los elementos centrados tanto horizontal como verticalmente.</p></div></section><section class="main__item container item" id="undefined-css-.villa-item img"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.villa-item img">.villa-item img</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.villa-item img {
+  width: 100%;
+    height: auto;
+    display: block; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}</code>" data-collapsed=".villa-item img { ... }"><code>.villa-item img { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para las imágenes dentro de cada villa (<code>.villa-item img</code>).</p><p>La imagen ocupa todo el ancho del contenedor y ajusta su altura de manera automática. Además, se aplica una transición para un efecto de transformación suave cuando se pasa el cursor.</p></div></section><section class="main__item container item" id="undefined-css-.villa-item img:hover"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.villa-item img:hover">.villa-item img:hover</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.villa-item img:hover {
+  transform: scale(1.1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}</code>" data-collapsed=".villa-item img:hover { ... }"><code>.villa-item img:hover { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Efecto hover sobre las imágenes de las villas (<code>.villa-item img:hover</code>).</p><p>Al pasar el cursor sobre la imagen, se aplica un efecto de escala, aumentando su tamaño ligeramente para generar una interacción visual atractiva.</p></div></section><section class="main__item container item" id="undefined-css-.villa-item p"><h3 class="item__heading"><a class="item__name" href="#undefined-css-.villa-item p">.villa-item p</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.villa-item p {
+  font-size: 2.2rem; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    margin-bottom: 1rem; 
+    color: #b9975b; 
+    margin-top: 1rem; 
+
+    /// Estilos para pantallas pequeñas.
+    /// 
+    /// En pantallas pequeñas, el tamaño de la fuente se reduce para mejorar la legibilidad
+    /// y optimizar el espacio en pantalla.
+    @include media(small) {
+        font-size: 1.2rem;  
+    }
+}</code>" data-collapsed=".villa-item p { ... }"><code>.villa-item p { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Estilos para el texto de cada villa (<code>.villa-item p</code>).</p><p>El texto es grande, en negrita y se encuentra en mayúsculas. Se aplica un color dorado y un margen para separar el texto de la imagen.</p></div></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Pruebassass</span><!-- Version --> <span class="project-info__version">- v1.0.0</span><!-- License --> <span class="project-info__license">, under ISC</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

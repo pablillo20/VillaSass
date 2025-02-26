@@ -1,49 +1,47 @@
-/**
- * Estilos para el encabezado principal (`.heading`).
- *
- * El encabezado se coloca en un grid específico y se centra utilizando Flexbox.
- * Se ajusta según el tamaño de pantalla.
- */
- .heading {
+/// Estilos para el encabezado principal (`.heading`).
+/// 
+/// El encabezado se coloca en un grid específico y se centra utilizando Flexbox.
+/// Se ajusta según el tamaño de pantalla.
+.heading {
     grid-column: 3/8;
     grid-row: 1/2;
     @include flex(); 
-    place-self: center; 
+    place-self: center;
 
-    /**
-     * Estilos para el texto dentro del encabezado (`.heading-text`).
-     *
-     * El margen y tamaño de fuente se ajustan según el tamaño de pantalla.
-     */
+    /// Estilos para el texto dentro del encabezado (`.heading-text`).
+    /// 
+    /// El margen y tamaño de fuente se ajustan según el tamaño de pantalla.
     &-text {
         margin: 2rem; // Aplica un margen de 2rem alrededor del texto.
         transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 
+        /// Efectos al pasar el cursor (hover).
+        /// 
+        /// Al pasar el cursor sobre el texto, el color cambia a "darkred" y
+        /// el texto se amplía ligeramente con un efecto de transformación.
         &:hover {
             color: darkred;
             transform: scale(1.05);
         }
 
-        /**
-         * Estilos para pantallas pequeñas.
-         *
-         * El margen se reduce a 1rem y el tamaño de fuente se ajusta a 3rem.
-         */
+        /// Estilos para pantallas pequeñas.
+        /// 
+        /// En pantallas pequeñas, el margen se reduce a 1rem y el tamaño de
+        /// fuente se ajusta a 3rem.
         @include media(small) {
             margin: 1rem;
             font-size: 3rem; 
         }
     }
 
-    /**
-     * Estilos para pantallas medianas.
-     *
-     * El encabezado se ajusta a las columnas 2 a 9 y filas 1 a 2.
-     * El texto también tiene un ajuste en el margen y tamaño de fuente.
-     */
+    /// Estilos para pantallas medianas.
+    /// 
+    /// En pantallas medianas, el encabezado se ajusta a las columnas 2 a 9
+    /// y filas 1 a 2. El texto también tiene un ajuste en el margen y tamaño
+    /// de fuente.
     @include media(medium) {
         grid-column: 2 / 9; 
-        grid-row: 1 / 2; 
+        grid-row: 1 / 2;
 
         &-text {
             margin: 1.5rem; 
@@ -51,12 +49,11 @@
         }
     }
 
-    /**
-     * Estilos para pantallas grandes.
-     *
-     * El encabezado se mantiene en las columnas 3 a 8 y filas 1 a 2.
-     * El texto también tiene un ajuste en el margen y tamaño de fuente.
-     */
+    /// Estilos para pantallas grandes.
+    /// 
+    /// En pantallas grandes, el encabezado se mantiene en las columnas 3 a 8
+    /// y filas 1 a 2. El texto también tiene un ajuste en el margen y tamaño
+    /// de fuente.
     @include media(large) {
         grid-column: 3 / 8; 
         grid-row: 1 / 2;

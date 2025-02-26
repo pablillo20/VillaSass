@@ -1,6 +1,16 @@
+/// Importación de la fuente `Nunito` desde Google Fonts.
+/// 
+/// Esta fuente se utiliza para todo el proyecto como la tipografía principal.
+/// 
+/// @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
 
 /* Paleta de colores */
+/// Paleta de colores utilizada en el proyecto.
+/// 
+/// Los colores se definen como variables de Sass para facilitar su reutilización a través del proyecto.
+/// 
+/// @group Colors
 $colors: (
     primary: black,
     secondary:  rgba(218, 165, 32, 0.5),
@@ -9,12 +19,22 @@ $colors: (
     quinta: rgb(111, 109, 34)
 );
 
-/* Funcion que devuelve el color */
+/// Función que devuelve un color según su nombre.
+/// 
+/// Esta función toma el nombre de un color definido en la paleta `$colors` y devuelve su valor.
+/// 
+/// @param {String} $color-name - El nombre del color (por ejemplo, 'primary', 'secondary', etc.).
+/// @return {Color} El valor del color asociado.
 @function color($color-name) {
     @return map-get($colors, $color-name);
 }
 
 /* Tamaño de fuente */
+/// Tamaños de fuente utilizados para los diferentes niveles de cabeceras y textos.
+/// 
+/// Los tamaños de fuente se definen en un mapa `$font-sizes` para facilitar su gestión.
+/// 
+/// @group Typography
 $font-sizes: (
     xxl: 6rem,
     xl: 6rem,
@@ -24,21 +44,42 @@ $font-sizes: (
     xs: 1.6rem
 );
 
-/* Funcion que devuelve un tamaño */
+/// Función que devuelve un tamaño de fuente según el tamaño especificado.
+/// 
+/// Esta función toma el nombre de un tamaño (por ejemplo, 'xxl', 'xl', etc.) y devuelve su valor.
+/// 
+/// @param {String} $size - El nombre del tamaño (por ejemplo, 'xxl', 'xl', etc.).
+/// @return {String} El tamaño de la fuente correspondiente.
 @function size($size) {
     @return map-get($font-sizes, $size);
 }
 
+/// Fuente principal utilizada en el proyecto.
+/// 
+/// La fuente `Nunito` se aplica globalmente en todo el proyecto.
+/// 
+/// @group Typography
 $font-family: 'Nunito', sans-serif;
 
 /* Variables de media queries */
+/// Breakpoints utilizados para las consultas de medios.
+/// 
+/// Se definen tamaños para los diferentes dispositivos (small, medium, large) para adaptar el diseño.
+/// 
+/// @group Media Queries
 $breakpoints: (
     small: 666px,
     medium: 768px,
     large: 1024px
 );
 
-/* Función para obtener los breakpoints */
+/// Función para obtener el valor del breakpoint correspondiente.
+/// 
+/// Esta función toma un nombre de tamaño (por ejemplo, 'small', 'medium', 'large') y devuelve su valor 
+/// en píxeles.
+/// 
+/// @param {String} $size - El nombre del tamaño de la pantalla (por ejemplo, 'small', 'medium', etc.).
+/// @return {Number} El valor del breakpoint correspondiente.
 @function breakpoint($size) {
     @return map-get($breakpoints, $size);
 }

@@ -1,30 +1,30 @@
-/**
- * Estilos globales aplicados a todos los elementos (`*`), pseudo-elementos `::after` y `::before`.
- * 
- * Estos estilos resetearán el margen y el padding predeterminado, establecerán una tipografía común
- * y activarán el modelo de caja **border-box** para todos los elementos.
- */
- *, *::after, *::before {
+/// Estilos globales aplicados a todos los elementos (`*`), pseudo-elementos `::after` y `::before`.
+///
+/// Estos estilos resetearán el margen y el padding predeterminado, establecerán una tipografía común
+/// y activarán el modelo de caja **border-box** para todos los elementos.
+///
+/// @group Global
+*, *::after, *::before {
     margin: 0; 
     padding: 0;
     font-family: $font-family; 
     box-sizing: border-box;   
 }
 
-/**
- * Estilos para el elemento `html`.
- * 
- * Se ajusta el tamaño de la fuente base al 62.5% para facilitar el cálculo de unidades rem.
- */
+/// Estilos para el elemento `html`.
+///
+/// Se ajusta el tamaño de la fuente base al 62.5% para facilitar el cálculo de unidades rem.
+///
+/// @group Global 
 html {
     font-size: 62.5%; 
 }
 
-/**
- * Estilos para el contenedor principal (`.container`).
- * 
- * Este contenedor utiliza el sistema de **grid** para organizar el contenido.
- */
+/// Estilos para el contenedor principal (`.container`).
+///
+/// Este contenedor utiliza el sistema de **grid** para organizar el contenido.
+///
+/// @group Layout
 .container {
     display: grid; 
     grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr); 

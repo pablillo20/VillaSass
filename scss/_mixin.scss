@@ -1,24 +1,22 @@
-/**
- * Mixin para generar cabeceras (`h1` a `h6`) con diferentes tamaños y colores.
- * 
- * Este mixin se encarga de aplicar el tamaño de fuente y color según el nivel de la cabecera 
- * (`h1` a `h6`), utilizando un esquema de colores y tamaños predefinidos.
- *
- * @param {Number} $level - El nivel de la cabecera (1 a 6). 
- * @param {Color} $color - El color de la cabecera (puede ser uno de los valores definidos como 'primary', 'secondary', etc.).
- */
- @mixin genera-cabeceras($level, $color) {
+/// Mixin para generar cabeceras (`h1` a `h6`) con diferentes tamaños y colores.
+/// 
+/// Este mixin se encarga de aplicar el tamaño de fuente y color según el nivel de la cabecera 
+/// (`h1` a `h6`), utilizando un esquema de colores y tamaños predefinidos.
+/// 
+/// @param {Number} $level - El nivel de la cabecera (1 a 6). 
+/// @param {Color} $color - El color de la cabecera (puede ser uno de los valores definidos como 'primary', 'secondary', etc.).
+@mixin genera-cabeceras($level, $color) {
     font-size: size($level); 
     color: color($color); 
     font-family: $font-family; 
 }
 
-/**
- * Genera las cabeceras `h1` a `h6` con tamaños y colores específicos.
- * 
- * Utiliza el mixin `genera-cabeceras` para cada nivel de cabecera (`h1` a `h6`),
- * con tamaños de fuente y colores predefinidos para cada uno.
- */
+/// Genera las cabeceras `h1` a `h6` con tamaños y colores específicos.
+/// 
+/// Utiliza el mixin `genera-cabeceras` para cada nivel de cabecera (`h1` a `h6`),
+/// con tamaños de fuente y colores predefinidos para cada uno.
+/// 
+/// @group Typography
 @for $i from 1 through 6 {
     h#{$i} {
         @include genera-cabeceras(
@@ -28,16 +26,14 @@
     }
 }
 
-/**
- * Mixin para crear un contenedor flex.
- * 
- * Este mixin crea un contenedor con el modelo **Flexbox** para alinear y distribuir los elementos 
- * de acuerdo con las opciones proporcionadas (dirección, justificación y alineación).
- *
- * @param {String} $direction - La dirección del eje principal (por defecto es `row`). Puede ser `row` o `column`.
- * @param {String} $justify - Cómo justificar los elementos a lo largo del eje principal (por defecto es `center`).
- * @param {String} $align - Cómo alinear los elementos a lo largo del eje transversal (por defecto es `center`).
- */
+/// Mixin para crear un contenedor flex.
+/// 
+/// Este mixin crea un contenedor con el modelo **Flexbox** para alinear y distribuir los elementos 
+/// de acuerdo con las opciones proporcionadas (dirección, justificación y alineación).
+/// 
+/// @param {String} $direction - La dirección del eje principal (por defecto es `row`). Puede ser `row` o `column`.
+/// @param {String} $justify - Cómo justificar los elementos a lo largo del eje principal (por defecto es `center`).
+/// @param {String} $align - Cómo alinear los elementos a lo largo del eje transversal (por defecto es `center`).
 @mixin flex($direction: row, $justify: center, $align: center) {
     display: flex; 
     flex-direction: $direction; 
@@ -45,29 +41,25 @@
     align-items: $align; 
 }
 
-/**
- * Mixin para aplicar estilos específicos para diferentes tamaños de pantalla (media queries).
- * 
- * Utiliza el mixin `media` para envolver contenido dentro de una consulta de medios que se activará 
- * cuando el tamaño de la pantalla sea menor o igual a un determinado breakpoint.
- *
- * @param {String} $size - El tamaño de la pantalla (puede ser uno de los valores definidos como 'small', 'medium', etc.).
- */
+/// Mixin para aplicar estilos específicos para diferentes tamaños de pantalla (media queries).
+/// 
+/// Utiliza el mixin `media` para envolver contenido dentro de una consulta de medios que se activará 
+/// cuando el tamaño de la pantalla sea menor o igual a un determinado breakpoint.
+/// 
+/// @param {String} $size - El tamaño de la pantalla (puede ser uno de los valores definidos como 'small', 'medium', etc.).
 @mixin media($size) {
     @media (max-width: breakpoint($size)) {
         @content; 
     }
 }
 
-/**
- * Mixin para agregar estilos a los íconos de FontAwesome.
- * 
- * Este mixin aplica estilos personalizados a los íconos de FontAwesome, incluyendo el tamaño de la fuente 
- * y el color, permitiendo que sean fácilmente reutilizados en toda la aplicación.
- *
- * @param {Color} $color - El color de los íconos (por defecto es `quinta`).
- * @param {String} $font-size - El tamaño de la fuente de los íconos (por defecto es `1.5rem`).
- */
+/// Mixin para agregar estilos a los íconos de FontAwesome.
+/// 
+/// Este mixin aplica estilos personalizados a los íconos de FontAwesome, incluyendo el tamaño de la fuente 
+/// y el color, permitiendo que sean fácilmente reutilizados en toda la aplicación.
+/// 
+/// @param {Color} $color - El color de los íconos (por defecto es `quinta`).
+/// @param {String} $font-size - El tamaño de la fuente de los íconos (por defecto es `1.5rem`).
 @mixin fafaIcons($color: color(quinta), $font-size: 1.5rem) {
     i {
         font-size: $font-size; 
